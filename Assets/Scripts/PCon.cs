@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class PCon : MonoBehaviour
 {
-    [SerializeField] private float a;
+    [SerializeField] private float v;
     private Rigidbody2D rb;
-    [SerializeField] private bool isGrounded;
     [SerializeField] private bool isWallCol;
     [SerializeField] private byte mode;
     [SerializeField] private float j;
@@ -18,30 +17,69 @@ public class PCon : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D BJ;
     [SerializeField] private PhysicsMaterial2D NJ;
 
+    private float groundRadius = 0.3f;
+	[SerializeField] private Transform groundCheck;
+	[SerializeField] private LayerMask groundMask; 
 
-    void Start(){
+
+    void Awake(){
     	rb = GetComponent<Rigidbody2D>();
+    	rb.drag = 1;
     	StartCoroutine("ControllerSwitcher");
     }
 
     void FixedUpdate(){
-    	float Horizontal = Input.GetAxis("Horizontal")*a;
 
     	if(mode == 0){
-    		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
-		    	rb.AddForce(new Vector2(Horizontal, j));
-	    	} else {
-	    		rb.AddForce(new Vector2(Horizontal, 0));
+    		if(Input.GetKey(KeyCode.D)){
+			  rb.velocity = new Vector2(v, rb.velocity.y);
+			} else {
+			  rb.velocity = new Vector2(0, rb.velocity.y);
+			}
+
+			if(Input.GetKey(KeyCode.A)){
+			  rb.velocity = new Vector2(v * -1, rb.velocity.y);
+			}
+
+    		if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+		    	rb.AddForce(new Vector2(0, j));
 	    	}
     	} else if(mode == 1){
-    		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
-		    	rb.AddForce(new Vector2(Horizontal, j));
-	    	} else {
-	    		rb.AddForce(new Vector2(Horizontal, 0));
+    		if(Input.GetKey(KeyCode.D)){
+			  rb.velocity = new Vector2(v, rb.velocity.y);
+			} else {
+			  rb.velocity = new Vector2(0, rb.velocity.y);
+			}
+
+			if(Input.GetKey(KeyCode.A)){
+			  rb.velocity = new Vector2(-1 * v, rb.velocity.y);
+			}
+
+    		if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+		    	rb.AddForce(new Vector2(0, j));
 	    	}
     	} else if(mode == 2){
-    		float Vertical = Input.GetAxis("Vertical")*a;
-    		rb.AddForce(new Vector2(Horizontal, Vertical));
+    		if(Input.GetKey(KeyCode.D)){
+			  rb.velocity = new Vector2(v, rb.velocity.y);
+			} else {
+			  rb.velocity = new Vector2(0, rb.velocity.y);
+			}
+
+			if(Input.GetKey(KeyCode.A)){
+			  rb.velocity = new Vector2(v * -1, rb.velocity.y);
+			}
+
+			if(Input.GetKey(KeyCode.W)){
+			  rb.velocity = new Vector2(rb.velocity.x, v);
+			} else {
+			  rb.velocity = new Vector2(rb.velocity.x, 0);
+			}
+
+			if(Input.GetKey(KeyCode.S)){
+			  rb.velocity = new Vector2(rb.velocity.x, v * -1);
+			}
+
+
     	} else if(mode == 3){
     		if(Input.GetMouseButtonDown(0)) {
 	    		Vector3 mousePos = Input.mousePosition;
@@ -61,34 +99,10 @@ public class PCon : MonoBehaviour
 		}
     }
 
-    void OnTriggerStay2D(Collider2D other){
-    	if(other.tag == "floor") {
-	    	isGrounded = true;
-	    } else if(other.tag == "wall"){
-	    	isWallCol = true;
-	    }
-    }
+	public bool isGrounded() {    
+	    return Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+	}
 
-    void OnTriggerExit2D(Collider2D other){
-    	if(other.tag == "floor") {
-	    	isGrounded = false;
-	    } else if(other.tag == "wall"){
-	    	isWallCol = false;
-	    }
-    }
-
-/*
-
-    public bool isGrounded(){
-    	RaycastHit2D hit = new RaycastHit2D();
-    	ContactFilter2D filter = new ContactFilter2D();
-    	if(Physics2D.Raycast(transform.position, Vector2.down, 1f, 1, 1f)){
-    		return true;
-    	}
-    	return false;
-    }
-
-*/
     IEnumerator ControllerSwitcher(){
     	while(true) {
 	    	yield return new WaitForSeconds(10f);
