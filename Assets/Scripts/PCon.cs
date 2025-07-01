@@ -6,26 +6,24 @@ using UnityEngine.UI;
 
 public class PCon : MonoBehaviour
 {
-	[SerializeField] private float v;
+	[SerializeField] private float v, j, vx, tmr;
 	private Rigidbody2D rb;
-	[SerializeField] private bool isWallCol;
 	[SerializeField] private byte mode;
-	[SerializeField] private float j;
-
-	public bool[] LegalControl;
-
-	[SerializeField] private GameObject bullet;
-	[SerializeField] private PhysicsMaterial2D BJ;
-	[SerializeField] private PhysicsMaterial2D NJ;
-
-	[SerializeField] private float groundRadius = 0.3f;
-	[SerializeField] private Transform groundCheck;
-	[SerializeField] private LayerMask groundMask; 
-	[SerializeField] private float maxYVelocity = 0.25f;
-
+	//[MenuItem("Controllers")]
+	public int LegalControl;
 	[SerializeField] private Image[] controllers;
+	[SerializeField] private Transform bulletTaker;
+	[SerializeField] private int bullets;
+	
+	//[MenuItem("PlayerCollider")]
+	[SerializeField] private float groundRadius = 0.3f;
+	[SerializeField] private Transform groundCheck, left, right, CamTake;
+	[SerializeField] private LayerMask groundMask; 
+	[SerializeField] private bool jW, an; 
 
-	[SerializeField] private bool jW; 
+	[SerializeField] private Animator anim;
+	[SerializeField] private SpriteRenderer sr;
+
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
@@ -35,96 +33,59 @@ public class PCon : MonoBehaviour
 	}
 
 	void FixedUpdate(){
-
-		if(mode == 0){
-			if(Input.GetKey(KeyCode.D)){
-				rb.velocity = new Vector2(v, rb.velocity.y);
-				if(transform.eulerAngles.y == 180f){
-					transform.eulerAngles = new Vector3(0f, 0f, 0f);
-				}
-			} else {
-				rb.velocity = new Vector2(0, rb.velocity.y);
-			}
-
-			if(Input.GetKey(KeyCode.A)){
-				rb.velocity = new Vector2(v * -1, rb.velocity.y);
-				if(transform.eulerAngles.y == 0f){
-					transform.eulerAngles = new Vector3(0f, 180f, 0f);
-				}
-			}
-
-			if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
-				rb.AddForce(new Vector2(0, j));
-			}
-		} else if(mode == 1){
-			float yvel = Mathf.Abs(rb.velocity.y) > maxYVelocity ? Mathf.Sign(rb.velocity.y) * maxYVelocity : rb.velocity.y;
-			if(Input.GetKey(KeyCode.D)){
-				rb.velocity = new Vector2(v, yvel);
-				if(transform.eulerAngles.y == 180f){
-					transform.eulerAngles = new Vector3(0f, 0f, 0f);
-				}
-			} else if(Input.GetKey(KeyCode.A)){
-				rb.velocity = new Vector2(-1 * v, yvel);
-				if(transform.eulerAngles.y == 0f){
-					transform.eulerAngles = new Vector3(0f, 180f, 0f);
-				}
-			} else {
-				if(jW){
-					rb.velocity = new Vector2(rb.velocity.x, yvel); 
+		switch(mode){
+			case 0:
+				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) ? j : rb.velocity.y);
+				if(rb.velocity == Vector2.zero){
+					if(an){
+						an = !an;
+						anim.SetBool("Move", false);
+					}
 				} else {
-					rb.velocity = new Vector2(0, yvel);
+					if(!an){
+						an = !an;
+						anim.SetBool("Move", true);
+					}
+					if(rb.velocity.x > 0 && sr.flipX) sr.flipX = false; 
+					else if(rb.velocity.x < 0 && !sr.flipX) sr.flipX = true;
 				}
-			}
-
-		} else if(mode == 2){
-			if(Input.GetKey(KeyCode.D)){
-				rb.velocity = new Vector2(v, rb.velocity.y);
-				if(transform.eulerAngles.y == 180f){
-					transform.eulerAngles = new Vector3(0f, 0f, 0f);
+				break;
+			case 1:
+				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -15;
+				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = 15;
+				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f;}
+				vx *= 0.95f;
+				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) || jW ? j : rb.velocity.y);
+				jW = false;
+				tmr -= 0.02f; 
+				break;
+			case 2:
+				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v, Input.GetAxis("Vertical") * v);
+				break;
+			case 3:
+				if(Input.GetMouseButtonDown(0)) {
+					Vector3 mousePos = Input.mousePosition;
+					
+					float x = mousePos.x / 1920 * 2 - 1;
+					float y = (1080 - mousePos.y) / 1080 * 2 - 1;
+					x *= 1920/1080;
+					Vector2 rd = new Vector3(x, -y, 0);
+					//Vector2 ro = transform.position - CamTake.position;
+					//rd += ro;
+					
+					bulletTaker.GetChild(bullets).transform.position = new Vector2(transform.position.x, transform.position.y) + rd*2;
+					bulletTaker.GetChild(bullets).GetComponent<Rigidbody2D>().velocity = rd*20;
+					bullets += 1;
+					bullets %= 10;
+					//print($"{x}, {y}");
 				}
-			} else {
-				rb.velocity = new Vector2(0, rb.velocity.y);
-			}
+				break;
 
-			if(Input.GetKey(KeyCode.A)){
-				rb.velocity = new Vector2(v * -1, rb.velocity.y);
-				if(transform.eulerAngles.y == 0f){
-					transform.eulerAngles = new Vector3(0f, 180f, 0f);
-				}
-			}
-
-			if(Input.GetKey(KeyCode.W)){
-				rb.velocity = new Vector2(rb.velocity.x, v);
-			} else {
-				rb.velocity = new Vector2(rb.velocity.x, 0);
-			}
-
-			if(Input.GetKey(KeyCode.S)){
-				rb.velocity = new Vector2(rb.velocity.x, v * -1);
-			}
-
-
-		} else if(mode == 3){
-			if(Input.GetMouseButtonDown(0)) {
-				Vector3 mousePos = Input.mousePosition;
-				
-				float x = mousePos.x / 1920 * 2 - 1;
-				float y = mousePos.y / 1080 * 2 - 1;
-				x *= 1920/1080;
-				Vector3 rd = new Vector3(x, y, 0);
-				Vector3 ro = transform.position;
-				rd = ro + rd*40;
-				
-
-				GameObject gm = Instantiate(bullet, transform.position, Quaternion.identity);
-				gm.GetComponent<Bullet>().toMov = rd;
-				gm.GetComponent<Bullet>().player = GetComponent<KeyMan>();
-			}
 		}
 	}
 
-	public bool isGrounded() {
-		return Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+	public bool isGrounded(Transform type) {
+		return Physics2D.OverlapCircle(type.position, groundRadius, groundMask);
 	}
 
 	IEnumerator ControllerSwitcher(){
@@ -137,46 +98,29 @@ public class PCon : MonoBehaviour
 	public void SwitchControl(){
 		mode += 1;
 		mode = (byte) (mode & 3);
-		while(!LegalControl[mode]){
+		while((LegalControl & (1 << mode)) == 0){
 			mode += 1;
 			mode = (byte) (mode & 3);
 		}
+
 		if(mode == 2){
 			rb.gravityScale = 0;
 		} else {
 			rb.gravityScale = 1;
 		}
 
-		if(mode == 1){
-			rb.sharedMaterial = BJ;
-		} else {
-			rb.sharedMaterial = NJ;
-		}
 		byte realI = 0;
 
 		for(byte i = 0; i < 4; i++){
 			byte len = (byte) (mode + i); 
 			len &= 3;
-			if(LegalControl[len]){
+			if((LegalControl & (1 << len)) != 0){
 				controllers[len].gameObject.SetActive(true);
-				controllers[len].transform.position = new Vector3(1637.5f, 1030 - 100 * realI, 0);
+				controllers[len].transform.position = new Vector3(1637.5f, 844 - 236* realI, 0);
 				realI += 1;
 			} else {
 				controllers[len].gameObject.SetActive(false);
 			}
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag == "floor" && mode == 1){
-			rb.velocity = new Vector2(rb.velocity.x * -10, 10);
-			jW = true;
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D other){
-		if(other.tag == "floor"){
-			jW = false;
 		}
 	}
 }

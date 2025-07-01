@@ -10,7 +10,7 @@ public class Location : MonoBehaviour
 	[SerializeField] private GameObject eye;
 
 
-	[SerializeField] private bool[] LegalControl;
+	[SerializeField] private int LegalControl;
 	[SerializeField] private PCon player;
 	[SerializeField] private Transform cam;
  

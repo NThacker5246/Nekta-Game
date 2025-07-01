@@ -9,10 +9,14 @@ public class Bootloader : MonoBehaviour
 
 	[SerializeField] private Transform[] players;
 	[SerializeField] private Transform[] cameras;
+	[SerializeField] private GameObject[] eyes;
+	[SerializeField] private int[] controllers;
 
 	void Awake(){
 		int lv = PlayerPrefs.GetInt("level");
 		player.position = players[lv].position;
 		camera.position = cameras[lv].position;
+		player.GetComponent<KeyMan>().eye = eyes[lv];
+		player.GetComponent<PCon>().LegalControl = controllers[lv];
 	}
 }

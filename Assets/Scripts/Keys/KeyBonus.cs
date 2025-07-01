@@ -28,7 +28,7 @@ public class KeyBonus : MonoBehaviour
 	IEnumerator Dest(){
 		anim.SetTrigger("Dest");
 		yield return new WaitForSeconds(1f);
-		Destroy(gameObject);
+		gameObject.SetActive(false);
 		StopCoroutine("Dest");
 	}
 }

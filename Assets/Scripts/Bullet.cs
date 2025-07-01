@@ -9,6 +9,6 @@ public class Bullet : MonoBehaviour
 	[SerializeField] private float vel;
 
 	void Update(){
-		transform.position = Vector3.MoveTowards(transform.position, toMov, Time.deltaTime*vel);
+		//transform.position = Vector3.MoveTowards(transform.position, toMov, Time.deltaTime*vel);
 	} 
 }
