@@ -17,7 +17,7 @@ public class PCon : MonoBehaviour
 	
 	//[MenuItem("PlayerCollider")]
 	[SerializeField] private float groundRadius = 0.3f;
-	[SerializeField] private Transform groundCheck, left, right, CamTake;
+	[SerializeField] private Transform groundCheck, left, right, CamTake, up;
 	[SerializeField] private LayerMask groundMask; 
 	[SerializeField] private bool jW, an; 
 
@@ -35,7 +35,11 @@ public class PCon : MonoBehaviour
 	void FixedUpdate(){
 		switch(mode){
 			case 0:
-				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) ? j : rb.velocity.y);
+				float ax = Input.GetAxis("Horizontal") * v;
+				if(ax > 0 && isGrounded(right)) ax = 0;
+				else if(ax < 0 && isGrounded(left)) ax = 0;
+				rb.velocity = new Vector2(ax, isGrounded(groundCheck) ? j * Input.GetAxis("Vertical") : rb.velocity.y);
+
 				if(rb.velocity == Vector2.zero){
 					if(an){
 						an = !an;
@@ -51,11 +55,11 @@ public class PCon : MonoBehaviour
 				}
 				break;
 			case 1:
-				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -15;
-				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = 15;
+				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -12.5f;
+				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = 12.5f;
 				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f;}
 				vx *= 0.95f;
-				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) || jW ? j : rb.velocity.y);
+				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.W) && isGrounded(groundCheck) || jW ? j : rb.velocity.y * (isGrounded(up) || isGrounded(groundCheck) ? -0.5f : 1));
 				jW = false;
 				tmr -= 0.02f; 
 				break;

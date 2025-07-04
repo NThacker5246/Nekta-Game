@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bootloader : MonoBehaviour
 {
 	[SerializeField] private Transform player;
-	[SerializeField] private Transform camera;
+	[SerializeField] private Transform _camera;
 
 	[SerializeField] private Transform[] players;
 	[SerializeField] private Transform[] cameras;
@@ -15,7 +15,7 @@ public class Bootloader : MonoBehaviour
 	void Awake(){
 		int lv = PlayerPrefs.GetInt("level");
 		player.position = players[lv].position;
-		camera.position = cameras[lv].position;
+		_camera.position = cameras[lv].position;
 		player.GetComponent<KeyMan>().eye = eyes[lv];
 		player.GetComponent<PCon>().LegalControl = controllers[lv];
 	}
