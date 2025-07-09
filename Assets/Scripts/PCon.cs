@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PCon : MonoBehaviour
 {
-	[SerializeField] private float v, j, vx, tmr;
+	[SerializeField] private float v, v4, vb, j, vx, tmr, maxJ, maxJb = 12;
 	private Rigidbody2D rb;
 	[SerializeField] private byte mode;
 	//[MenuItem("Controllers")]
@@ -19,7 +19,9 @@ public class PCon : MonoBehaviour
 	[SerializeField] private float groundRadius = 0.3f;
 	[SerializeField] private Transform groundCheck, left, right, CamTake, up;
 	[SerializeField] private LayerMask groundMask; 
-	[SerializeField] private bool jW, an; 
+	[SerializeField] private bool jW, an, jumping; 
+	[SerializeField] private Sprite[] jbmv;
+	private SpriteRenderer sel;
 
 	[SerializeField] private Animator anim;
 	[SerializeField] private SpriteRenderer sr;
@@ -27,6 +29,7 @@ public class PCon : MonoBehaviour
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
+		sel = GetComponent<SpriteRenderer>();
 		rb.drag = 1;
 		StartCoroutine("ControllerSwitcher");
 		SwitchControl();
@@ -38,7 +41,18 @@ public class PCon : MonoBehaviour
 				float ax = Input.GetAxis("Horizontal") * v;
 				if(ax > 0 && isGrounded(right)) ax = 0;
 				else if(ax < 0 && isGrounded(left)) ax = 0;
-				rb.velocity = new Vector2(ax, isGrounded(groundCheck) ? j * Input.GetAxis("Vertical") : rb.velocity.y);
+
+				if(j < maxJ && Input.GetKey(KeyCode.Space)){
+					j += 0.1f;
+					if(!jumping && isGrounded(groundCheck)) jumping = true;
+				} else if(!jumping) {
+					//j -= 0.1f;
+					j = 0;
+				} else {
+					jumping = false;
+				}
+
+				rb.velocity = new Vector2(ax, jumping ? j : rb.velocity.y);
 
 				if(rb.velocity == Vector2.zero){
 					if(an){
@@ -55,16 +69,16 @@ public class PCon : MonoBehaviour
 				}
 				break;
 			case 1:
-				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -12.5f;
-				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = 12.5f;
-				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f;}
+				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -vb;
+				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = vb;
+				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f; sel.sprite = jbmv[1]; anim.SetBool("Move", true);}
 				vx *= 0.95f;
-				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.W) && isGrounded(groundCheck) || jW ? j : rb.velocity.y * (isGrounded(up) || isGrounded(groundCheck) ? -0.5f : 1));
+				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) || jW ? maxJb : rb.velocity.y * (isGrounded(up) || isGrounded(groundCheck) ? -0.5f : 1));
 				jW = false;
 				tmr -= 0.02f; 
 				break;
 			case 2:
-				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v, Input.GetAxis("Vertical") * v);
+				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v4, Input.GetAxis("Vertical") * v4);
 				break;
 			case 3:
 				if(Input.GetMouseButtonDown(0)) {
@@ -88,6 +102,10 @@ public class PCon : MonoBehaviour
 		}
 	}
 
+	public void clearAnim(){
+		anim.SetBool("Move", false);
+	}
+
 	public bool isGrounded(Transform type) {
 		return Physics2D.OverlapCircle(type.position, groundRadius, groundMask);
 	}
@@ -101,16 +119,24 @@ public class PCon : MonoBehaviour
 
 	public void SwitchControl(){
 		mode += 1;
+		anim.SetBool("Move", false);
 		mode = (byte) (mode & 3);
 		while((LegalControl & (1 << mode)) == 0){
 			mode += 1;
 			mode = (byte) (mode & 3);
+			an = false;
 		}
 
 		if(mode == 2){
 			rb.gravityScale = 0;
 		} else {
 			rb.gravityScale = 1;
+		}
+
+		if(mode == 1){
+			anim.SetBool("Ball", true);
+		} else {
+			anim.SetBool("Ball", false);
 		}
 
 		byte realI = 0;
