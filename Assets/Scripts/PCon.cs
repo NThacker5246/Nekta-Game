@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class PCon : MonoBehaviour
 {
+	[SerializeField] private Camera camera;
 	[SerializeField] private float v, v4, vb, j, vx, tmr, maxJ, maxJb = 12;
 	private Rigidbody2D rb;
 	[SerializeField] private byte mode;
 	//[MenuItem("Controllers")]
 	public int LegalControl;
 	[SerializeField] private Image[] controllers;
-	[SerializeField] private Transform bulletTaker;
-	[SerializeField] private int bullets;
+	[SerializeField] private Bullet bullet;
 	
 	//[MenuItem("PlayerCollider")]
 	[SerializeField] private float groundRadius = 0.3f;
@@ -84,17 +84,25 @@ public class PCon : MonoBehaviour
 				if(Input.GetMouseButtonDown(0)) {
 					Vector3 mousePos = Input.mousePosition;
 					
-					float x = mousePos.x / 1920 * 2 - 1;
-					float y = (1080 - mousePos.y) / 1080 * 2 - 1;
-					x *= 1920/1080;
-					Vector2 rd = new Vector3(x, -y, 0);
-					//Vector2 ro = transform.position - CamTake.position;
+					//float x = mousePos.x / 1920 * 2 - 1;
+					//float y = (1080 - mousePos.y) / 1080 * 2 - 1;
+					//x *= 1920/1080;
+					//Vector2 rd = new Vector3(x, -y, 0);
+					//Vector2 ro = new Vector2(transform.position.x % 14, transform.position.y % 14);
+					//bullet.transform.position = transform.position;
+					Vector3 pos = camera.ScreenToWorldPoint(mousePos);
+					bullet.gameObject.SetActive(true);
+					bullet.toMov = new Vector3(pos.x, pos.y, 0);
+					bullet.transform.position = transform.position;
+					bullet.flag = true;
+
+
 					//rd += ro;
 					
-					bulletTaker.GetChild(bullets).transform.position = new Vector2(transform.position.x, transform.position.y) + rd*2;
-					bulletTaker.GetChild(bullets).GetComponent<Rigidbody2D>().velocity = rd*20;
-					bullets += 1;
-					bullets %= 10;
+					//bulletTaker.GetChild(bullets).transform.position = new Vector2(transform.position.x, transform.position.y) + rd*2;
+					//bulletTaker.GetChild(bullets).GetComponent<Rigidbody2D>().velocity = rd*20;
+					//bullets += 1;
+					//bullets %= 10;
 					//print($"{x}, {y}");
 				}
 				break;
@@ -130,7 +138,7 @@ public class PCon : MonoBehaviour
 		if(mode == 2){
 			rb.gravityScale = 0;
 		} else {
-			rb.gravityScale = 1;
+			rb.gravityScale = 1.25f;
 		}
 
 		if(mode == 1){

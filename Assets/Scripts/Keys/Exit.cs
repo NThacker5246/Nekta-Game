@@ -12,6 +12,9 @@ public class Exit : MonoBehaviour
 		if(other.tag == "Player") {
 			inColl = true;
 			player = other.GetComponent<PCon>();
+		} else if(other.tag == "Bullet"){
+			nextLevel.SetController();
+			player.SwitchControl();
 		}
 	}
 

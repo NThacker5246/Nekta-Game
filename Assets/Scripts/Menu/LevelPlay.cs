@@ -20,6 +20,7 @@ public class LevelPlay : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			bl = !bl;
 			men.SetActive(bl);
+			Time.timeScale = bl ? 0.001f : 1f;
 		}
 	}
 }
