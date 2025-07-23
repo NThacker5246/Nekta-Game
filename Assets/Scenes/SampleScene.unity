@@ -3278,8 +3278,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489653894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.84, y: 0.05, z: 11}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -3.5779, y: 0.05, z: 11}
+  m_LocalScale: {x: 2.0511634, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -11380,6 +11380,7 @@ MonoBehaviour:
   - {fileID: 1609458373, guid: 8fa4271c745d9a54cb152aca7b1cbe50, type: 3}
   anim: {fileID: 1681642502}
   sr: {fileID: 1681642498}
+  blu: 0
 --- !u!50 &1681642496
 Rigidbody2D:
   serializedVersion: 4
@@ -13592,7 +13593,7 @@ MonoBehaviour:
   - {fileID: 579666777}
   - {fileID: 1017967704}
   - {fileID: 22510660}
-  controllers: 01000000030000000300000003000000070000000600000006000000050000000600000005000000
+  controllers: 09000000030000000300000003000000070000000600000006000000050000000600000005000000
 --- !u!1 &1993179260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14736,7 +14737,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7947472932269769910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14753,4 +14754,5 @@ MonoBehaviour:
   player: {fileID: 1681642501}
   vel: 20
   rb: {fileID: 7947472932269769909}
-  flag: 0
+  col: {fileID: 7457377441424866859}
+  counter: 0

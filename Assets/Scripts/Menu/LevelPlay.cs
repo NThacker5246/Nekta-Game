@@ -8,6 +8,11 @@ public class LevelPlay : MonoBehaviour
 	[SerializeField] private GameObject men;
 	[SerializeField] private bool bl;
 
+	void Awake(){
+		bl = false;
+		Time.timeScale = 1f;
+	}
+
 	public void Play(){
 		SceneManager.LoadScene(1);
 	}

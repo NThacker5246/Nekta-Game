@@ -26,6 +26,7 @@ public class PCon : MonoBehaviour
 	[SerializeField] private Animator anim;
 	[SerializeField] private SpriteRenderer sr;
 
+	[SerializeField] private float blu;
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
@@ -81,7 +82,7 @@ public class PCon : MonoBehaviour
 				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v4, Input.GetAxis("Vertical") * v4);
 				break;
 			case 3:
-				if(Input.GetMouseButtonDown(0)) {
+				if(blu <= 0 && Input.GetMouseButtonDown(0)) {
 					Vector3 mousePos = Input.mousePosition;
 					
 					//float x = mousePos.x / 1920 * 2 - 1;
@@ -94,8 +95,8 @@ public class PCon : MonoBehaviour
 					bullet.gameObject.SetActive(true);
 					bullet.toMov = new Vector3(pos.x, pos.y, 0);
 					bullet.transform.position = transform.position;
-					bullet.flag = true;
-
+					bullet.counter = 1;
+					blu = 2;
 
 					//rd += ro;
 					
@@ -104,6 +105,8 @@ public class PCon : MonoBehaviour
 					//bullets += 1;
 					//bullets %= 10;
 					//print($"{x}, {y}");
+				} else {
+					blu -= Time.deltaTime;
 				}
 				break;
 
