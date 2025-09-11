@@ -5,16 +5,19 @@ using UnityEngine;
 public class Exit : MonoBehaviour
 {
 	[SerializeField] private bool inColl;
-	[SerializeField] private Location nextLevel;
-	[SerializeField] private PCon player;
+	//[SerializeField] private Location nextLevel;
+	//[SerializeField] private PCon player;
+	[SerializeField] private Location locall;
+
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player") {
 			inColl = true;
-			player = other.GetComponent<PCon>();
+			//player = other.GetComponent<PCon>();
 		} else if(other.tag == "Bullet"){
-			nextLevel.SetController();
-			player.SwitchControl();
+			//nextLevel.SetController();
+			//player.SwitchControl();
+			locall.NextLevel();
 		}
 	}
 
@@ -26,8 +29,7 @@ public class Exit : MonoBehaviour
 
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.E) && inColl){
-			nextLevel.SetController();
-			player.SwitchControl();
+			locall.NextLevel();
 		}
 	}
 }

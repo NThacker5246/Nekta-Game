@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Bootloader : MonoBehaviour
 {
-	[SerializeField] private Transform player;
-	[SerializeField] private Transform _camera;
-
-	[SerializeField] private Transform[] players;
-	[SerializeField] private Transform[] cameras;
-	[SerializeField] private GameObject[] eyes;
-	[SerializeField] private int[] controllers;
+	[SerializeField] private Location locall;
+	[SerializeField] private PCon player;
 
 	void Awake(){
 		int lv = PlayerPrefs.GetInt("level");
-		player.position = players[lv].position;
-		_camera.position = cameras[lv].position;
-		player.GetComponent<KeyMan>().eye = eyes[lv];
-		player.GetComponent<PCon>().LegalControl = controllers[lv];
+		int cp = PlayerPrefs.GetInt("chapter");
+		locall.level = lv - 1;
+		locall.chapter = cp;
+		locall.NextLevel();
+		PlayerPrefs.SetInt("level", 0);
+		PlayerPrefs.SetInt("chapter", 0);
+		player.SetFirstPossibleController();
+		//player.position = players[lv].position;
+		//_camera.position = cameras[lv].position;
+		//player.GetComponent<KeyMan>().eye = eyes[lv];
+		//player.GetComponent<PCon>().LegalControl = controllers[lv];
 	}
 }

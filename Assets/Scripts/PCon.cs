@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class PCon : MonoBehaviour
 {
-	[SerializeField] private Camera camera;
+	[SerializeField] private Camera _camera;
 	[SerializeField] private float v, v4, vb, j, vx, tmr, maxJ, maxJb = 12;
-	private Rigidbody2D rb;
+	[SerializeField] private Rigidbody2D rb;
 	[SerializeField] private byte mode;
 	//[MenuItem("Controllers")]
 	public int LegalControl;
@@ -23,7 +23,7 @@ public class PCon : MonoBehaviour
 	[SerializeField] private Sprite[] jbmv;
 	private SpriteRenderer sel;
 
-	[SerializeField] private Animator anim;
+	[SerializeField] private PlayerAnima anim;
 	[SerializeField] private SpriteRenderer sr;
 
 	[SerializeField] private float blu;
@@ -54,32 +54,36 @@ public class PCon : MonoBehaviour
 				}
 
 				rb.velocity = new Vector2(ax, jumping ? j : rb.velocity.y);
+				if(rb.velocity.x > 0 && sr.flipX) sr.flipX = false; 
+				else if(rb.velocity.x < 0 && !sr.flipX) sr.flipX = true;
 
-				if(rb.velocity == Vector2.zero){
-					if(an){
-						an = !an;
-						anim.SetBool("Move", false);
-					}
+				if(jumping){
+					anim.SetLimits(11, 12);
+				} else if(rb.velocity.y != 0f) {
+					anim.SetLimits(13, 14);
 				} else {
-					if(!an){
-						an = !an;
-						anim.SetBool("Move", true);
+					if(Mathf.Abs(rb.velocity.x) < 0.01f){
+						anim.SetLimits(7, 10);
+					} else {
+						anim.SetLimits(0, 6);
 					}
-					if(rb.velocity.x > 0 && sr.flipX) sr.flipX = false; 
-					else if(rb.velocity.x < 0 && !sr.flipX) sr.flipX = true;
 				}
 				break;
 			case 1:
 				if(Input.GetKey(KeyCode.A) && tmr <= 0) vx = -vb;
 				if(Input.GetKey(KeyCode.D) && tmr <= 0) vx = vb;
-				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f; sel.sprite = jbmv[1]; anim.SetBool("Move", true);}
+				if((isGrounded(left) || isGrounded(right)) && tmr <= 0) {vx *= -1; jW = true; tmr = 0.25f; anim.SetLimits(2, 2); anim.Redraw(); /*sel.sprite = jbmv[1]; anim.SetBool("Move", true);*/}
 				vx *= 0.95f;
 				rb.velocity = new Vector2(vx, Input.GetKeyDown(KeyCode.Space) && isGrounded(groundCheck) || jW ? maxJb : rb.velocity.y * (isGrounded(up) || isGrounded(groundCheck) ? -0.5f : 1));
 				jW = false;
 				tmr -= 0.02f; 
+				if(!isGrounded(left) && !isGrounded(right) && tmr < -0.2f){anim.SetLimits(0, 1);}
+
 				break;
 			case 2:
 				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v4, Input.GetAxis("Vertical") * v4);
+				if(Input.GetKey(KeyCode.W)) {anim.SetLimits(4, 7);} else if(Input.GetKey(KeyCode.S)) {anim.SetLimits(0, 3);}
+				if(Input.GetKey(KeyCode.D)) {sr.flipX = false; anim.SetLimits(8, 9);} else if(Input.GetKey(KeyCode.A)) {sr.flipX = true; anim.SetLimits(8, 9);}
 				break;
 			case 3:
 				if(blu <= 0 && Input.GetMouseButtonDown(0)) {
@@ -91,12 +95,14 @@ public class PCon : MonoBehaviour
 					//Vector2 rd = new Vector3(x, -y, 0);
 					//Vector2 ro = new Vector2(transform.position.x % 14, transform.position.y % 14);
 					//bullet.transform.position = transform.position;
-					Vector3 pos = camera.ScreenToWorldPoint(mousePos);
+					Vector3 pos = _camera.ScreenToWorldPoint(mousePos);
 					bullet.gameObject.SetActive(true);
 					bullet.toMov = new Vector3(pos.x, pos.y, 0);
 					bullet.transform.position = transform.position;
 					bullet.counter = 1;
 					blu = 2;
+					anim.SetLimits(2, 2);
+
 
 					//rd += ro;
 					
@@ -107,6 +113,7 @@ public class PCon : MonoBehaviour
 					//print($"{x}, {y}");
 				} else {
 					blu -= Time.deltaTime;
+					anim.SetLimits(0, 1);
 				}
 				break;
 
@@ -114,11 +121,51 @@ public class PCon : MonoBehaviour
 	}
 
 	public void clearAnim(){
-		anim.SetBool("Move", false);
+		//anim.SetBool("Move", false);
 	}
 
 	public bool isGrounded(Transform type) {
 		return Physics2D.OverlapCircle(type.position, groundRadius, groundMask);
+	}
+
+	public void SetFirstPossibleController(){
+		mode = 0;
+		//anim.SetBool("Move", false);
+		if((LegalControl & 1) == 0){
+			while((LegalControl & (1 << mode)) == 0){
+				mode += 1;
+				mode = (byte) (mode & 3);
+				an = false;
+			}
+		}
+		anim.SetMode(mode);
+
+		if(mode == 2){
+			rb.gravityScale = 0;
+		} else {
+			rb.gravityScale = 1.25f;
+		}
+
+		if(mode == 1){
+			//anim.SetBool("Ball", true);
+		} else {
+			//anim.SetBool("Ball", false);
+		}
+
+		byte realI = 0;
+
+		for(byte i = 0; i < 4; i++){
+			byte len = (byte) (mode + i); 
+			len &= 3;
+			if((LegalControl & (1 << len)) != 0){
+				controllers[len].gameObject.SetActive(true);
+				controllers[len].transform.position = new Vector3(1637.5f, 844 - 236* realI, 0);
+				realI += 1;
+			} else {
+				controllers[len].gameObject.SetActive(false);
+			}
+		}
+
 	}
 
 	IEnumerator ControllerSwitcher(){
@@ -130,7 +177,7 @@ public class PCon : MonoBehaviour
 
 	public void SwitchControl(){
 		mode += 1;
-		anim.SetBool("Move", false);
+		//anim.SetBool("Move", false);
 		mode = (byte) (mode & 3);
 		while((LegalControl & (1 << mode)) == 0){
 			mode += 1;
@@ -138,6 +185,7 @@ public class PCon : MonoBehaviour
 			an = false;
 		}
 
+		anim.SetMode(mode);
 		if(mode == 2){
 			rb.gravityScale = 0;
 		} else {
@@ -145,9 +193,9 @@ public class PCon : MonoBehaviour
 		}
 
 		if(mode == 1){
-			anim.SetBool("Ball", true);
+			//anim.SetBool("Ball", true);
 		} else {
-			anim.SetBool("Ball", false);
+			//anim.SetBool("Ball", false);
 		}
 
 		byte realI = 0;

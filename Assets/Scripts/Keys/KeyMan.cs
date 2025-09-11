@@ -6,15 +6,28 @@ using UnityEngine.UI;
 public class KeyMan : MonoBehaviour
 {
 	[SerializeField] private byte keys;
-	[SerializeField] private Text txt;
-	public GameObject eye;
+	[SerializeField] public Text txt;
+	[SerializeField] private Location locall;
+	[SerializeField] private GameObject[] lastkeys = new GameObject[3];
+	[SerializeField] private int counter;
 
-	public void AddKey(){
+	public void AddKey(GameObject that){
 		keys += 1;
+		lastkeys[counter] = that;
+		++counter;
+		if(counter == 3) counter = 0;
 		txt.text = "Keys: " + keys;
 		if(keys == 3){
-			eye.SetActive(true);
+			//eye.SetActive(true);
 			keys = 0;
+			locall.DisplayEye();
+			//txt.text = "Keys: " + keys;
 		}
 	} 
+
+	public void RestartKeys(){
+		for(int i = 0; i < 3; ++i) {lastkeys[i].SetActive(true);}
+		//counter = 0;
+		keys = 0;
+	}
 }

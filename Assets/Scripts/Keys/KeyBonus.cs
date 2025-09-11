@@ -14,11 +14,11 @@ public class KeyBonus : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other){
 		if(!flag) {
 			if(other.tag == "Player"){
-				other.GetComponent<KeyMan>().AddKey();
+				other.GetComponent<KeyMan>().AddKey(gameObject);
 				StartCoroutine("Dest");
 				flag = true;
 			} else if(other.tag == "Bullet"){
-				other.GetComponent<Bullet>().player.AddKey();
+				other.GetComponent<Bullet>().player.AddKey(gameObject);
 				StartCoroutine("Dest");
 				flag = true;
 			}
@@ -30,5 +30,10 @@ public class KeyBonus : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		gameObject.SetActive(false);
 		StopCoroutine("Dest");
+	}
+
+	void OnEnable(){
+		flag = false;
+		anim.ResetTrigger("Dest");
 	}
 }

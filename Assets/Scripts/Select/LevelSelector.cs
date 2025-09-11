@@ -29,6 +29,7 @@ public class LevelSelector : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.Space)){
 			PlayerPrefs.SetInt("level", level);
+			PlayerPrefs.SetInt("chapter", 0);
 			SceneManager.LoadScene(2);
 		}
 
