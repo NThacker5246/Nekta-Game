@@ -59,7 +59,7 @@ public class PCon : MonoBehaviour
 
 				if(jumping){
 					anim.SetLimits(11, 12);
-				} else if(rb.velocity.y != 0f) {
+				} else if(!isGrounded(groundCheck)) {
 					anim.SetLimits(13, 14);
 				} else {
 					if(Mathf.Abs(rb.velocity.x) < 0.01f){
@@ -82,8 +82,8 @@ public class PCon : MonoBehaviour
 				break;
 			case 2:
 				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v4, Input.GetAxis("Vertical") * v4);
-				if(Input.GetKey(KeyCode.W)) {anim.SetLimits(4, 7);} else if(Input.GetKey(KeyCode.S)) {anim.SetLimits(0, 3);}
-				if(Input.GetKey(KeyCode.D)) {sr.flipX = false; anim.SetLimits(8, 9);} else if(Input.GetKey(KeyCode.A)) {sr.flipX = true; anim.SetLimits(8, 9);}
+				if(Input.GetKey(KeyCode.W)) {anim.SetLimitsNow(4, 7);} else if(Input.GetKey(KeyCode.S)) {anim.SetLimitsNow(0, 3);}
+				if(Input.GetKey(KeyCode.D)) {sr.flipX = false; anim.SetLimitsNow(8, 9);} else if(Input.GetKey(KeyCode.A)) {sr.flipX = true; anim.SetLimitsNow(8, 9);}
 				break;
 			case 3:
 				if(blu <= 0 && Input.GetMouseButtonDown(0)) {
@@ -129,6 +129,8 @@ public class PCon : MonoBehaviour
 	}
 
 	public void SetFirstPossibleController(){
+		StopCoroutine("ControllerSwitcher");
+		StartCoroutine("ControllerSwitcher");
 		mode = 0;
 		//anim.SetBool("Move", false);
 		if((LegalControl & 1) == 0){
@@ -176,6 +178,7 @@ public class PCon : MonoBehaviour
 	}
 
 	public void SwitchControl(){
+		blu = 0;
 		mode += 1;
 		//anim.SetBool("Move", false);
 		mode = (byte) (mode & 3);

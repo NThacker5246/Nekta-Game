@@ -7,22 +7,26 @@ public class Pad : MonoBehaviour
 
 	[SerializeField] private Rigidbody2D rb;
 	[SerializeField] private float velocity;
-	[SerializeField] private Animator an;
+	[SerializeField] private PlayerAnima an;
 
 	void Awake(){
-		an = GetComponent<Animator>();
+		an = GetComponent<PlayerAnima>();
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player" && rb == null){
 			rb = other.GetComponent<Rigidbody2D>();
 			rb.velocity = new Vector3(rb.velocity.x, velocity);
-			an.SetBool("Jmp", true);
-			an.SetBool("Jmp", false);
+			an.SetLimits(1, 4);
+			an.SetLimitsAwait(0, 0);
+			//an.SetBool("Jmp", true);
+			//an.SetBool("Jmp", false);
 		} else if(other.tag == "Player"){
 			rb.velocity = new Vector3(rb.velocity.x, velocity);
-			an.SetBool("Jmp", true);
-			an.SetBool("Jmp", false);
+			an.SetLimits(1, 4);
+			an.SetLimitsAwait(0, 0);
+			//an.SetBool("Jmp", true);
+			//an.SetBool("Jmp", false);
 		}
 		rb.velocity = new Vector3(rb.velocity.x, velocity);
 	}

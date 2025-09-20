@@ -5,10 +5,11 @@ using UnityEngine;
 public class KeyBonus : MonoBehaviour
 {
 	[SerializeField] private bool flag;
-	[SerializeField] private Animator anim;
+	[SerializeField] private PlayerAnima anim;
 
 	void Awake(){
-		anim = GetComponent<Animator>();
+		anim = GetComponent<PlayerAnima>();
+		anim.SetLimits(0, 7);
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -26,14 +27,14 @@ public class KeyBonus : MonoBehaviour
 	}
 
 	IEnumerator Dest(){
-		anim.SetTrigger("Dest");
-		yield return new WaitForSeconds(1f);
+		anim.SetLimits(8, 11);
+		yield return new WaitForSeconds(0.5f);
 		gameObject.SetActive(false);
 		StopCoroutine("Dest");
 	}
 
 	void OnEnable(){
 		flag = false;
-		anim.ResetTrigger("Dest");
+		anim.SetLimits(0, 7);
 	}
 }
