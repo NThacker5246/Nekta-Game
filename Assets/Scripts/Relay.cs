@@ -13,7 +13,7 @@ public class Relay : MonoBehaviour
 	[SerializeField] private byte mode = 0;
 
 	void Start(){
-		StartCoroutine("UpdateWall");
+		// StartCoroutine("UpdateWall");
 	}
 
 	IEnumerator UpdateWall(){
@@ -29,7 +29,7 @@ public class Relay : MonoBehaviour
 						passive[i].SetActive(!flag);
 					}
 
-					yield return new WaitForSeconds(1f);
+					yield return new WaitForSeconds(2f);
 				}
 				break;
 			case 1:
@@ -38,10 +38,14 @@ public class Relay : MonoBehaviour
 					++counter;
 					if(counter == active.Length) counter = 0;
 					active[counter].SetActive(true);
-					yield return new WaitForSeconds(1f);
+					yield return new WaitForSeconds(2f);
 				}
 				break;
 		}
 		
+	}
+
+	void OnEnable(){
+		StartCoroutine("UpdateWall");
 	}
 }

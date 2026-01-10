@@ -16,6 +16,7 @@ public class Pad : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player" && rb == null){
 			rb = other.GetComponent<Rigidbody2D>();
+			// an = other.GetComponent<PlayerAnima>();
 			rb.velocity = new Vector3(rb.velocity.x, velocity);
 			an.SetLimits(1, 4);
 			an.SetLimitsAwait(0, 0);
@@ -28,6 +29,6 @@ public class Pad : MonoBehaviour
 			//an.SetBool("Jmp", true);
 			//an.SetBool("Jmp", false);
 		}
-		rb.velocity = new Vector3(rb.velocity.x, velocity);
+		// rb.velocity = new Vector3(rb.velocity.x, velocity);
 	}
 }

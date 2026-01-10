@@ -45,6 +45,7 @@ public class Exit : MonoBehaviour
 		anim = GetComponent<PlayerAnima>();
 		anim.SetLimits(0, 3);
 		anim.SetLimitsAwait(9, 10);
+		flag = false;
 	}
 
 	IEnumerator End(){

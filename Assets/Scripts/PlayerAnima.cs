@@ -116,7 +116,7 @@ public class PlayerAnima : MonoBehaviour
 		}
 	}
 
-	void Awake(){
+	void OnEnable(){
 		player = GetComponent<SpriteRenderer>();
 		lengthes[0] = platform.Length;
 		lengthes[1] = ball.Length;

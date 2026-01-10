@@ -26,7 +26,7 @@ public class KeyMan : MonoBehaviour
 	} 
 
 	public void RestartKeys(){
-		for(int i = 0; i < 3; ++i) {lastkeys[i].SetActive(true);}
+		// for(int i = 0; i < 3; ++i) {lastkeys[i].SetActive(true);}
 		//counter = 0;
 		keys = 0;
 	}

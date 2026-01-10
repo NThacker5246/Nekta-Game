@@ -215,4 +215,10 @@ public class PCon : MonoBehaviour
 			}
 		}
 	}
+
+	public void SkipControl(){
+		SwitchControl();
+		StopCoroutine("ControllerSwitcher");
+		StartCoroutine("ControllerSwitcher");
+	}
 }
