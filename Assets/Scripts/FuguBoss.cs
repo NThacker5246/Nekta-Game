@@ -8,9 +8,16 @@ public class FuguBoss : MonoBehaviour
 	[SerializeField] private LayerMask groundMask;
 	[SerializeField] private Rigidbody2D rb;
 	[SerializeField] private Location locall;
+    [SerializeField] private Vector3 inital;
     // Start is called before the first frame update
+
+    void Awake(){
+        inital = transform.position;
+    }
+
     void OnEnable()
     {
+        transform.position = inital;
         rb.velocity = new Vector2(1, 1);
     }
 

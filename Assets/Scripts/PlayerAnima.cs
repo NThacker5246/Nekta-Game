@@ -123,6 +123,7 @@ public class PlayerAnima : MonoBehaviour
 		lengthes[2] = wallclip.Length;
 		lengthes[3] = gun.Length;
 		StartCoroutine("Animate");
+		counter = 0;
 	}
 
 	void Update(){
