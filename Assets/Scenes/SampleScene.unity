@@ -559,6 +559,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &15338011
 Rigidbody2D:
@@ -705,6 +706,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &16119875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -856,6 +860,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &21378203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1529,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &36760641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,8 +1743,9 @@ RectTransform:
   m_Children:
   - {fileID: 97363439}
   - {fileID: 413686150}
-  - {fileID: 1696823877}
   - {fileID: 720347378}
+  - {fileID: 1749283221}
+  - {fileID: 1696823877}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2270,6 +2281,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &61572957
 Rigidbody2D:
@@ -2416,6 +2428,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &63599596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +2810,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &78306379
 Rigidbody2D:
@@ -2941,6 +2957,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &81612243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4190,6 +4209,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &119158178
 Rigidbody2D:
@@ -4336,6 +4356,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &123528908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,6 +4901,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &133089494
 Rigidbody2D:
@@ -5024,6 +5048,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &134859251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,6 +5342,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &141933384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5874,6 +5904,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &172774559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6100,6 +6133,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &179669504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -6251,6 +6287,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &190755997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6477,6 +6516,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &197283067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6890,6 +6932,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &202456381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7471,6 +7516,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &214752717
 GameObject:
   m_ObjectHideFlags: 0
@@ -7764,6 +7812,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &223354863
 GameObject:
   m_ObjectHideFlags: 0
@@ -8054,6 +8105,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &239790306
 Rigidbody2D:
@@ -8200,6 +8252,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &243665126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8318,6 +8373,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &254030293
 GameObject:
   m_ObjectHideFlags: 0
@@ -8465,6 +8523,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &255715640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -8619,6 +8680,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &263420046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8797,6 +8861,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &264678505
 Rigidbody2D:
@@ -8943,6 +9008,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &266936213
 GameObject:
   m_ObjectHideFlags: 0
@@ -9289,6 +9357,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &280385982
 Rigidbody2D:
@@ -9435,6 +9504,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &282320664
 GameObject:
   m_ObjectHideFlags: 0
@@ -9714,6 +9786,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &285598897
 GameObject:
   m_ObjectHideFlags: 0
@@ -10007,6 +10082,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &298913377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -10158,6 +10236,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &303068509 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -11813,6 +11894,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &349692648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12431,6 +12515,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &378478409
 GameObject:
   m_ObjectHideFlags: 0
@@ -12606,9 +12693,18 @@ MonoBehaviour:
   cam: {fileID: 519420032}
   ll: {fileID: 0}
   level: 0
-  chapter: 2
+  chapter: 0
   rest: 0
   plakeys: {fileID: 1681642501}
+  cutscenes:
+  - {fileID: 921370450}
+  - {fileID: 1741961740}
+  - {fileID: 1476130438}
+  - {fileID: 1983786279}
+  - {fileID: 887796568}
+  c4: {fileID: 667866159}
+  c5: {fileID: 1974114759}
+  master_cut: {fileID: 1749283220}
 --- !u!114 &378478412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12622,6 +12718,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locall: {fileID: 378478411}
+  cuts:
+  - {fileID: 921370450}
+  - {fileID: 1741961740}
+  - {fileID: 1476130438}
+  - {fileID: 1983786279}
+  - {fileID: 887796568}
   player: {fileID: 1681642495}
 --- !u!1 &380135123
 GameObject:
@@ -13967,6 +14069,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &398535744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14273,6 +14378,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &407355511
 GameObject:
   m_ObjectHideFlags: 0
@@ -15138,6 +15246,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &438794476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -15677,6 +15788,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &469716981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15875,6 +15989,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &479477648
 GameObject:
   m_ObjectHideFlags: 0
@@ -15928,6 +16045,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &479477651
 Rigidbody2D:
@@ -16074,6 +16192,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &479809777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -16202,6 +16323,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &489332362
 GameObject:
   m_ObjectHideFlags: 0
@@ -16417,6 +16541,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &489653894
 GameObject:
   m_ObjectHideFlags: 0
@@ -16696,6 +16823,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &495989731
 Rigidbody2D:
@@ -16842,6 +16970,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &499701205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16995,6 +17126,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &511061480
 GameObject:
   m_ObjectHideFlags: 0
@@ -17443,6 +17577,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &513798668 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -17558,6 +17695,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &516825920
 Rigidbody2D:
@@ -17704,6 +17842,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &517165994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17822,6 +17963,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -17905,6 +18049,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 489653895}
+  - {fileID: 1160295379}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18205,6 +18350,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &531827029
 GameObject:
   m_ObjectHideFlags: 0
@@ -18324,6 +18472,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &536098612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18442,6 +18593,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &539320809
 GameObject:
   m_ObjectHideFlags: 0
@@ -18744,6 +18898,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &548148761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -18867,6 +19024,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &558503202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -18990,6 +19150,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &560594746
 GameObject:
   m_ObjectHideFlags: 0
@@ -19547,6 +19710,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &583864235
 GameObject:
   m_ObjectHideFlags: 0
@@ -19910,6 +20076,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &595084634
 GameObject:
   m_ObjectHideFlags: 0
@@ -20493,6 +20662,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &616038969
 Rigidbody2D:
@@ -20639,6 +20809,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &619407582
 GameObject:
   m_ObjectHideFlags: 0
@@ -20677,6 +20850,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &619407584
 Rigidbody2D:
@@ -20838,6 +21012,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &625787629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20956,6 +21133,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &627558683
 GameObject:
   m_ObjectHideFlags: 0
@@ -21009,6 +21189,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &627558686
 Rigidbody2D:
@@ -21155,6 +21336,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &628091293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -21471,6 +21655,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &643325988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22177,6 +22364,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &654858398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22406,6 +22596,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &664491772
 GameObject:
   m_ObjectHideFlags: 0
@@ -22552,6 +22745,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &665048626
 GameObject:
   m_ObjectHideFlags: 0
@@ -22885,6 +23081,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3477383451754018423, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
   m_PrefabInstance: {fileID: 666567599}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &667866159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667866160}
+  - component: {fileID: 667866161}
+  - component: {fileID: 667866162}
+  m_Layer: 0
+  m_Name: cutscene6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &667866160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667866159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &667866161
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667866159}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 71aff3fc012cdd647b3b761443fddd04, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &667866162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667866159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1001 &668726410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23012,6 +23291,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &673153226
 GameObject:
   m_ObjectHideFlags: 0
@@ -23246,6 +23528,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &680192378
 GameObject:
   m_ObjectHideFlags: 0
@@ -23466,6 +23751,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &688179785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -24405,6 +24693,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &718117665
 GameObject:
   m_ObjectHideFlags: 0
@@ -24548,7 +24839,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 45265215}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -24991,6 +25282,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &745936638
 GameObject:
   m_ObjectHideFlags: 0
@@ -25065,6 +25359,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &753302233
 GameObject:
   m_ObjectHideFlags: 0
@@ -25211,6 +25508,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &754663593
 GameObject:
   m_ObjectHideFlags: 0
@@ -25264,6 +25564,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &754663596
 Rigidbody2D:
@@ -25410,6 +25711,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &758312674
 GameObject:
   m_ObjectHideFlags: 0
@@ -25463,6 +25767,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &758312677
 Rigidbody2D:
@@ -25609,6 +25914,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &763452920
 GameObject:
   m_ObjectHideFlags: 0
@@ -25683,6 +25991,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &775781372
 GameObject:
   m_ObjectHideFlags: 0
@@ -25829,6 +26140,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &776564069
 GameObject:
   m_ObjectHideFlags: 0
@@ -26163,6 +26477,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &779358494
 Rigidbody2D:
@@ -26324,6 +26639,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &784583646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -26617,6 +26935,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &799732918
 GameObject:
   m_ObjectHideFlags: 0
@@ -26763,6 +27084,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &800099213
 GameObject:
   m_ObjectHideFlags: 0
@@ -27398,6 +27722,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &809613108
 GameObject:
   m_ObjectHideFlags: 0
@@ -28115,6 +28442,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &846045083
 GameObject:
   m_ObjectHideFlags: 0
@@ -28283,6 +28613,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &849911959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -28905,6 +29238,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &865457475
 GameObject:
   m_ObjectHideFlags: 0
@@ -29128,6 +29464,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &873270289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -29176,6 +29515,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &875909642
 GameObject:
   m_ObjectHideFlags: 0
@@ -29229,6 +29571,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &875909645
 Rigidbody2D:
@@ -29375,6 +29718,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &876925365
 GameObject:
   m_ObjectHideFlags: 0
@@ -29443,6 +29789,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &876925368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30039,6 +30388,92 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
+--- !u!1 &887796568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887796569}
+  - component: {fileID: 887796570}
+  - component: {fileID: 887796571}
+  m_Layer: 0
+  m_Name: cutscene7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &887796569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887796568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &887796570
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887796568}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 2c54b2d4364237841ab511932c15c840, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &887796571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887796568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1001 &891874102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30162,6 +30597,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &893017498
 GameObject:
   m_ObjectHideFlags: 0
@@ -30308,6 +30746,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &894257007
 GameObject:
   m_ObjectHideFlags: 0
@@ -30392,6 +30833,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &901794858
 Rigidbody2D:
@@ -30538,6 +30980,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &905351961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -30845,6 +31290,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &914735785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -30855,6 +31303,89 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
   m_PrefabInstance: {fileID: 1616377521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &921370450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921370451}
+  - component: {fileID: 921370452}
+  - component: {fileID: 921370453}
+  m_Layer: 0
+  m_Name: cutscene2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &921370451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921370450}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &921370452
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921370450}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 5e7b79e36265dc34baee77dd7fdc424c, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &921370453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921370450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1 &923606041
 GameObject:
   m_ObjectHideFlags: 0
@@ -31050,6 +31581,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &938087515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -31284,6 +31818,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &949207028
 GameObject:
   m_ObjectHideFlags: 0
@@ -31430,6 +31967,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &950981824
 GameObject:
   m_ObjectHideFlags: 0
@@ -31642,6 +32182,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &962341546
 Rigidbody2D:
@@ -31788,6 +32329,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &966239564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -31831,6 +32375,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &967606464
 GameObject:
   m_ObjectHideFlags: 0
@@ -32107,6 +32654,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &974280141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32225,6 +32775,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &975454146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32343,6 +32896,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &981544864
 GameObject:
   m_ObjectHideFlags: 0
@@ -32538,6 +33094,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &989144255
 Rigidbody2D:
@@ -32684,6 +33241,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &990769562 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -32925,6 +33485,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1004920104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33043,6 +33606,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1006398924
 GameObject:
   m_ObjectHideFlags: 0
@@ -33331,6 +33897,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1009647697
 GameObject:
   m_ObjectHideFlags: 0
@@ -34051,6 +34620,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1032478336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -34285,6 +34857,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1043798541
 GameObject:
   m_ObjectHideFlags: 0
@@ -34369,6 +34944,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1044522361
 Rigidbody2D:
@@ -34515,6 +35091,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1045576347
 GameObject:
   m_ObjectHideFlags: 0
@@ -34953,6 +35532,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1053083035
 Rigidbody2D:
@@ -35114,6 +35694,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1053912676
 GameObject:
   m_ObjectHideFlags: 0
@@ -35621,6 +36204,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1056854016
 GameObject:
   m_ObjectHideFlags: 0
@@ -35674,6 +36260,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1056854019
 Rigidbody2D:
@@ -35820,6 +36407,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1062239030 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -35893,6 +36483,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &1062861571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36539,6 +37132,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1080187551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37258,6 +37854,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1098781554
 GameObject:
   m_ObjectHideFlags: 0
@@ -37504,6 +38103,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1101710902
 Rigidbody2D:
@@ -37650,6 +38250,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1110101490
 GameObject:
   m_ObjectHideFlags: 0
@@ -38035,6 +38638,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1121914189
 GameObject:
   m_ObjectHideFlags: 0
@@ -38159,6 +38765,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1136403229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -38202,6 +38811,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1136838956
 GameObject:
   m_ObjectHideFlags: 0
@@ -38255,6 +38867,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1136838959
 Rigidbody2D:
@@ -38401,6 +39014,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1138054827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -38755,6 +39371,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1145259363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38888,6 +39507,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1153775546
 Rigidbody2D:
@@ -39034,6 +39654,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1159914638
 GameObject:
   m_ObjectHideFlags: 0
@@ -39069,6 +39692,134 @@ Transform:
   m_Father: {fileID: 125254349}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1160295378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160295379}
+  - component: {fileID: 1160295380}
+  m_Layer: 0
+  m_Name: mint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1160295379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160295378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1160295380
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160295378}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6bd829a6dcc74b74ebc2405ace411d52, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1164289836
 GameObject:
   m_ObjectHideFlags: 0
@@ -39340,6 +40091,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1171638653
 GameObject:
   m_ObjectHideFlags: 0
@@ -39611,6 +40365,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1177582337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39889,6 +40646,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1192179165
 GameObject:
   m_ObjectHideFlags: 0
@@ -40146,6 +40906,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1197296609
 GameObject:
   m_ObjectHideFlags: 0
@@ -40554,6 +41317,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1202814312
 GameObject:
   m_ObjectHideFlags: 0
@@ -40788,6 +41554,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1207460611
 GameObject:
   m_ObjectHideFlags: 0
@@ -41173,6 +41942,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1220955330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41296,6 +42068,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1235640132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41414,6 +42189,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1242804792
 GameObject:
   m_ObjectHideFlags: 0
@@ -41693,6 +42471,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1245527991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42144,6 +42925,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1263010067
 Rigidbody2D:
@@ -42305,6 +43087,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1263293107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42423,6 +43208,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1272238011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -42926,6 +43714,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1276708527
 GameObject:
   m_ObjectHideFlags: 0
@@ -43465,6 +44256,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1294083434
 GameObject:
   m_ObjectHideFlags: 0
@@ -43570,6 +44364,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1301519422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43688,6 +44485,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1301726292
 GameObject:
   m_ObjectHideFlags: 0
@@ -44002,6 +44802,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1313868552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -44045,6 +44848,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1317190454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44163,6 +44969,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1319579124
 GameObject:
   m_ObjectHideFlags: 0
@@ -44437,6 +45246,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1322525643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -44480,6 +45292,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1328500324
 GameObject:
   m_ObjectHideFlags: 0
@@ -44709,6 +45524,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1332266767
 GameObject:
   m_ObjectHideFlags: 0
@@ -44855,6 +45673,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1333298777
 GameObject:
   m_ObjectHideFlags: 0
@@ -44908,6 +45729,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1333298780
 Rigidbody2D:
@@ -45054,6 +45876,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1336582359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45172,6 +45997,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1339457175
 GameObject:
   m_ObjectHideFlags: 0
@@ -45884,6 +46712,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1349478311
 GameObject:
   m_ObjectHideFlags: 0
@@ -46092,6 +46923,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1364807178
 GameObject:
   m_ObjectHideFlags: 0
@@ -46358,6 +47192,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1367662039
 GameObject:
   m_ObjectHideFlags: 0
@@ -46457,6 +47294,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &1367675515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47014,6 +47854,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1385062044
 GameObject:
   m_ObjectHideFlags: 0
@@ -47197,6 +48040,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1387323395
 Rigidbody2D:
@@ -47343,6 +48187,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1390844418
 GameObject:
   m_ObjectHideFlags: 0
@@ -47396,6 +48243,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1390844421
 Rigidbody2D:
@@ -47542,6 +48390,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1392290086
 GameObject:
   m_ObjectHideFlags: 0
@@ -48037,6 +48888,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1399317514
 GameObject:
   m_ObjectHideFlags: 0
@@ -48233,6 +49087,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1399562474
 Rigidbody2D:
@@ -48379,6 +49234,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1403459279
 GameObject:
   m_ObjectHideFlags: 0
@@ -48547,6 +49405,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1407954562
 GameObject:
   m_ObjectHideFlags: 0
@@ -48746,6 +49607,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1411627864
 GameObject:
   m_ObjectHideFlags: 0
@@ -48799,6 +49663,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1411627867
 Rigidbody2D:
@@ -48945,6 +49810,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1414129400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49068,6 +49936,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1420620870
 GameObject:
   m_ObjectHideFlags: 0
@@ -49284,6 +50155,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1433515188
 GameObject:
   m_ObjectHideFlags: 0
@@ -49702,6 +50576,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1443207617
 GameObject:
   m_ObjectHideFlags: 0
@@ -50059,6 +50936,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1454231305
 GameObject:
   m_ObjectHideFlags: 0
@@ -50580,6 +51460,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1463481775
 GameObject:
   m_ObjectHideFlags: 0
@@ -50774,6 +51657,92 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
+--- !u!1 &1476130438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476130439}
+  - component: {fileID: 1476130440}
+  - component: {fileID: 1476130441}
+  m_Layer: 0
+  m_Name: cutscene4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1476130439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476130438}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1476130440
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476130438}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 46d7ffa13c6eee14ca57227aed6a29c7, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1476130441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476130438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1 &1476271385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -50817,6 +51786,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1477366826
 GameObject:
   m_ObjectHideFlags: 0
@@ -51065,6 +52037,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1482890162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -51108,6 +52083,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1483203950
 GameObject:
   m_ObjectHideFlags: 0
@@ -51182,6 +52160,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1489297770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51300,6 +52281,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1489398891
 GameObject:
   m_ObjectHideFlags: 0
@@ -51454,6 +52438,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1497506422
 GameObject:
   m_ObjectHideFlags: 0
@@ -51600,6 +52587,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1504150601
 GameObject:
   m_ObjectHideFlags: 0
@@ -51653,6 +52643,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1504150604
 Rigidbody2D:
@@ -51799,6 +52790,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1506787816
 GameObject:
   m_ObjectHideFlags: 0
@@ -51985,6 +52979,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1508339008
 GameObject:
   m_ObjectHideFlags: 0
@@ -52053,6 +53050,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &1508339011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52500,6 +53500,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1535109613
 GameObject:
   m_ObjectHideFlags: 0
@@ -52646,6 +53649,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1537351617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52769,6 +53775,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1541100009
 GameObject:
   m_ObjectHideFlags: 0
@@ -52853,6 +53862,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1543792128
 Rigidbody2D:
@@ -52999,6 +54009,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1544845888
 GameObject:
   m_ObjectHideFlags: 0
@@ -53305,6 +54318,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1556071055
 GameObject:
   m_ObjectHideFlags: 0
@@ -53358,6 +54374,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1556071058
 Rigidbody2D:
@@ -53504,6 +54521,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1556719572 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -53547,6 +54567,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1559912254 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -53590,6 +54613,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1564809769
 GameObject:
   m_ObjectHideFlags: 0
@@ -53803,6 +54829,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1566337357
 Rigidbody2D:
@@ -53949,6 +54976,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1567205453
 GameObject:
   m_ObjectHideFlags: 0
@@ -54251,6 +55281,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1569704458
 Rigidbody2D:
@@ -54397,6 +55428,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1573203857
 GameObject:
   m_ObjectHideFlags: 0
@@ -54723,6 +55757,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1581929633
 GameObject:
   m_ObjectHideFlags: 0
@@ -55171,6 +56208,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1593405594
 GameObject:
   m_ObjectHideFlags: 0
@@ -55386,6 +56426,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1600141932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55772,6 +56815,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1604787898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55890,6 +56936,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1605767262
 GameObject:
   m_ObjectHideFlags: 0
@@ -56147,6 +57196,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1607992137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -56190,6 +57242,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1609500303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56308,6 +57363,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1610023794
 GameObject:
   m_ObjectHideFlags: 0
@@ -56554,6 +57612,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1613693284
 GameObject:
   m_ObjectHideFlags: 0
@@ -56700,6 +57761,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1616377521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56818,6 +57882,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1618342780
 GameObject:
   m_ObjectHideFlags: 0
@@ -56964,6 +58031,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1618825072
 GameObject:
   m_ObjectHideFlags: 0
@@ -57509,6 +58579,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1629991883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57627,6 +58700,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1632657237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -57670,6 +58746,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1633492736
 GameObject:
   m_ObjectHideFlags: 0
@@ -57819,6 +58898,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1634239865
 GameObject:
   m_ObjectHideFlags: 0
@@ -57965,6 +59047,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1641378717
 GameObject:
   m_ObjectHideFlags: 0
@@ -58322,6 +59407,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1652191320
 Rigidbody2D:
@@ -58468,6 +59554,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1653854565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -58511,6 +59600,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1653909029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -58554,6 +59646,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1654470369
 GameObject:
   m_ObjectHideFlags: 0
@@ -59019,6 +60114,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1659202410
 GameObject:
   m_ObjectHideFlags: 0
@@ -59168,6 +60266,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1667810442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -59211,6 +60312,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1668255781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59903,6 +61007,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1681642494
 GameObject:
   m_ObjectHideFlags: 0
@@ -59955,7 +61062,7 @@ MonoBehaviour:
   - {fileID: 1463481777}
   - {fileID: 591507402}
   bullet: {fileID: 7947472932269769910}
-  groundRadius: 0.025
+  groundRadius: 0.0125
   groundCheck: {fileID: 853967907}
   left: {fileID: 394959261}
   right: {fileID: 262441715}
@@ -60179,6 +61286,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1687322836
 GameObject:
   m_ObjectHideFlags: 0
@@ -60422,6 +61532,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1696823876
 GameObject:
   m_ObjectHideFlags: 0
@@ -60454,7 +61567,7 @@ RectTransform:
   m_Children:
   - {fileID: 1677698775}
   m_Father: {fileID: 45265215}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -60542,6 +61655,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1707284327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -60585,6 +61701,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1707912352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60708,6 +61827,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1714263711
 GameObject:
   m_ObjectHideFlags: 0
@@ -60854,6 +61976,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1718559146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60972,6 +62097,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1722816842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -61015,6 +62143,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1730430206
 GameObject:
   m_ObjectHideFlags: 0
@@ -61068,6 +62199,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1730430209
 Rigidbody2D:
@@ -61214,6 +62346,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1731296971
 GameObject:
   m_ObjectHideFlags: 0
@@ -61443,6 +62578,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1732587314
 GameObject:
   m_ObjectHideFlags: 0
@@ -61517,6 +62655,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1741603551
 GameObject:
   m_ObjectHideFlags: 0
@@ -61760,6 +62901,92 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
+--- !u!1 &1741961740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741961741}
+  - component: {fileID: 1741961742}
+  - component: {fileID: 1741961743}
+  m_Layer: 0
+  m_Name: cutcsene3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1741961741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741961740}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1741961742
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741961740}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: f14a6a4c9235c204ba1c26b0afcc439c, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1741961743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741961740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1 &1742174159
 GameObject:
   m_ObjectHideFlags: 0
@@ -61798,6 +63025,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1742174161
 Rigidbody2D:
@@ -61959,6 +63187,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1744120161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62107,6 +63338,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &1744382628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62295,6 +63529,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1746648096
 GameObject:
   m_ObjectHideFlags: 0
@@ -62446,6 +63683,122 @@ PolygonCollider2D:
       - {x: 2.175, y: 2.73}
       - {x: 2.175, y: -4.44}
       - {x: -5.8944683, y: -4.475365}
+--- !u!1 &1749283220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749283221}
+  - component: {fileID: 1749283224}
+  - component: {fileID: 1749283223}
+  - component: {fileID: 1749283222}
+  m_Layer: 5
+  m_Name: CutCat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1749283221
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749283220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 921370451}
+  - {fileID: 1741961741}
+  - {fileID: 1476130439}
+  - {fileID: 1983786280}
+  - {fileID: 667866160}
+  - {fileID: 887796569}
+  - {fileID: 1974114760}
+  m_Father: {fileID: 45265215}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!328 &1749283222
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749283220}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: bf6f8b51febe3a54d82d9525f50431ec, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1749283223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749283220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1749283224
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749283220}
+  m_CullTransparentMesh: 1
 --- !u!1 &1751723259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -62489,6 +63842,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1758529353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -62532,6 +63888,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1761819549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62730,6 +64089,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1762464673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62848,6 +64210,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1765610666
 GameObject:
   m_ObjectHideFlags: 0
@@ -63051,6 +64416,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1772451544
 GameObject:
   m_ObjectHideFlags: 0
@@ -63089,6 +64457,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1772451546
 Rigidbody2D:
@@ -63250,6 +64619,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1780966907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63368,6 +64740,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1785175338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63491,6 +64866,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1791298458
 GameObject:
   m_ObjectHideFlags: 0
@@ -63606,6 +64984,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1803076501
 GameObject:
   m_ObjectHideFlags: 0
@@ -63932,6 +65313,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1813332588
 GameObject:
   m_ObjectHideFlags: 0
@@ -63985,6 +65369,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1813332591
 Rigidbody2D:
@@ -64131,6 +65516,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1814262816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64249,6 +65637,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1822208964
 GameObject:
   m_ObjectHideFlags: 0
@@ -64287,6 +65678,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1822208966
 Rigidbody2D:
@@ -64448,6 +65840,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1822408057
 GameObject:
   m_ObjectHideFlags: 0
@@ -64623,6 +66018,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1826612612
 GameObject:
   m_ObjectHideFlags: 0
@@ -65030,6 +66428,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1852704440
 GameObject:
   m_ObjectHideFlags: 0
@@ -65176,6 +66577,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1855295080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -65540,6 +66944,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1867141732
 GameObject:
   m_ObjectHideFlags: 0
@@ -66174,6 +67581,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1878207746
 GameObject:
   m_ObjectHideFlags: 0
@@ -66320,6 +67730,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1881059950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66438,6 +67851,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1883268010
 GameObject:
   m_ObjectHideFlags: 0
@@ -66639,6 +68055,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1890151937
 GameObject:
   m_ObjectHideFlags: 0
@@ -67173,6 +68592,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1898837919
 GameObject:
   m_ObjectHideFlags: 0
@@ -67319,6 +68741,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1900236703
 GameObject:
   m_ObjectHideFlags: 0
@@ -67465,6 +68890,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1901636672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -67508,6 +68936,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1904775492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -67698,6 +69129,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1909821048
 GameObject:
   m_ObjectHideFlags: 0
@@ -67736,6 +69170,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1909821050
 Rigidbody2D:
@@ -67897,6 +69332,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1913021679
 GameObject:
   m_ObjectHideFlags: 0
@@ -68122,6 +69560,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1931144680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -68165,6 +69606,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1931524022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68283,6 +69727,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1933567154
 GameObject:
   m_ObjectHideFlags: 0
@@ -68451,6 +69898,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1935032146
 GameObject:
   m_ObjectHideFlags: 0
@@ -68666,6 +70116,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1943017956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -68709,6 +70162,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1950766740
 GameObject:
   m_ObjectHideFlags: 0
@@ -68952,6 +70408,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1959074589
 GameObject:
   m_ObjectHideFlags: 0
@@ -69342,6 +70801,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &1971387365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69460,6 +70922,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1973744503
 GameObject:
   m_ObjectHideFlags: 0
@@ -69624,6 +71089,89 @@ PolygonCollider2D:
       - {x: 5.645, y: -1.01}
       - {x: 5.645, y: 1.9699999}
       - {x: 5.625, y: 1.99}
+--- !u!1 &1974114759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974114760}
+  - component: {fileID: 1974114761}
+  - component: {fileID: 1974114762}
+  m_Layer: 0
+  m_Name: cutscene8ei
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1974114760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974114759}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1974114761
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974114759}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 2d3a43c09d3072349a1732c2ce13822f, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1974114762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974114759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1 &1976473262
 GameObject:
   m_ObjectHideFlags: 0
@@ -69770,6 +71318,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1977170258
 GameObject:
   m_ObjectHideFlags: 0
@@ -69852,6 +71403,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &1977170261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69869,6 +71423,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &1977170262
 Rigidbody2D:
@@ -70323,6 +71878,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1982492318
 GameObject:
   m_ObjectHideFlags: 0
@@ -70626,6 +72184,89 @@ PolygonCollider2D:
       - {x: 6.835, y: 2.35}
       - {x: 6.835, y: 2.8899999}
       - {x: 6.815, y: 2.9099998}
+--- !u!1 &1983786279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983786280}
+  - component: {fileID: 1983786281}
+  - component: {fileID: 1983786282}
+  m_Layer: 0
+  m_Name: cutscene5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1983786280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983786279}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1749283221}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1983786281
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983786279}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 1a345e5c30527df4e85ab0eb7d443b15, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 519420031}
+  m_TargetTexture: {fileID: 8400000, guid: d82492532fe039a4ca1b4bd21badbd48, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &1983786282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983786279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680f3a362a591fe4d824c4fad54de6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 0}
+  isStarted: 0
+  audio: {fileID: 1160295380}
 --- !u!1 &1984660019
 GameObject:
   m_ObjectHideFlags: 0
@@ -71079,6 +72720,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1995958340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -71122,6 +72766,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &1999267798
 GameObject:
   m_ObjectHideFlags: 0
@@ -71440,6 +73087,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &2013402867
 Rigidbody2D:
@@ -71586,6 +73234,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2014590210
 GameObject:
   m_ObjectHideFlags: 0
@@ -71765,6 +73416,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!114 &2019005370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71951,6 +73605,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &2019430679
 Rigidbody2D:
@@ -72112,6 +73767,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2023530017
 GameObject:
   m_ObjectHideFlags: 0
@@ -72280,6 +73938,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2030112968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -72323,6 +73984,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &2033000890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72441,6 +74105,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2034991390
 GameObject:
   m_ObjectHideFlags: 0
@@ -72905,6 +74572,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &2041028683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73023,6 +74693,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2047188386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -73066,6 +74739,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2049683135
 GameObject:
   m_ObjectHideFlags: 0
@@ -73345,6 +75021,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2055617832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -73388,6 +75067,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2056053476
 GameObject:
   m_ObjectHideFlags: 0
@@ -73565,6 +75247,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2063344925
 GameObject:
   m_ObjectHideFlags: 0
@@ -73733,6 +75418,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2065028003
 GameObject:
   m_ObjectHideFlags: 0
@@ -74035,6 +75723,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &2074647642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74153,6 +75844,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2080269639
 GameObject:
   m_ObjectHideFlags: 0
@@ -74206,6 +75900,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &2080269642
 Rigidbody2D:
@@ -74352,6 +76047,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2082748629
 GameObject:
   m_ObjectHideFlags: 0
@@ -74501,6 +76199,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2089670204
 GameObject:
   m_ObjectHideFlags: 0
@@ -74679,6 +76380,7 @@ MonoBehaviour:
   flag: 0
   anim: {fileID: 0}
   player: {fileID: 0}
+  plac: {fileID: 0}
   swapCanvas: {fileID: 720347377}
 --- !u!50 &2090504833
 Rigidbody2D:
@@ -74825,6 +76527,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2098609442
 GameObject:
   m_ObjectHideFlags: 0
@@ -74899,6 +76604,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1001 &2099402628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75017,6 +76725,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2099933365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -75060,6 +76771,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2100586634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -75103,6 +76817,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2102067708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -75146,6 +76863,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2107046258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -75189,6 +76909,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2109226378
 GameObject:
   m_ObjectHideFlags: 0
@@ -75467,6 +77190,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2113951434
 GameObject:
   m_ObjectHideFlags: 0
@@ -75613,6 +77339,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2115287833
 GameObject:
   m_ObjectHideFlags: 0
@@ -76291,6 +78020,9 @@ MonoBehaviour:
   l2f: 0
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2131728325
 GameObject:
   m_ObjectHideFlags: 0
@@ -76562,6 +78294,9 @@ MonoBehaviour:
   l2f: 4
   dt: 0.125
   awaiting: 0
+  _lock: 0
+  _playOnlyEnable: 0
+  _enables: 0
 --- !u!1 &2135330213
 GameObject:
   m_ObjectHideFlags: 0

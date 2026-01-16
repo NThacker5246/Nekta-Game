@@ -82,8 +82,8 @@ public class PCon : MonoBehaviour
 				break;
 			case 2:
 				rb.velocity = new Vector2(Input.GetAxis("Horizontal") * v4, Input.GetAxis("Vertical") * v4);
-				if(Input.GetKey(KeyCode.W)) {anim.SetLimitsNow(4, 7);} else if(Input.GetKey(KeyCode.S)) {anim.SetLimitsNow(0, 3);}
-				if(Input.GetKey(KeyCode.D)) {sr.flipX = false; anim.SetLimitsNow(8, 9);} else if(Input.GetKey(KeyCode.A)) {sr.flipX = true; anim.SetLimitsNow(8, 9);}
+				if(Input.GetKey(KeyCode.W)) {anim.SetLimits(4, 7);} else if(Input.GetKey(KeyCode.S)) {anim.SetLimits(0, 3);}
+				if(Input.GetKey(KeyCode.D)) {sr.flipX = false; anim.SetLimits(8, 9);} else if(Input.GetKey(KeyCode.A)) {sr.flipX = true; anim.SetLimits(8, 9);}
 				break;
 			case 3:
 				if(blu <= 0 && Input.GetMouseButtonDown(0)) {
@@ -125,7 +125,10 @@ public class PCon : MonoBehaviour
 	}
 
 	public bool isGrounded(Transform type) {
-		return Physics2D.OverlapCircle(type.position, groundRadius, groundMask);
+		Collider2D col = Physics2D.OverlapCircle(type.position, groundRadius, groundMask);
+		if(col == null) return false;
+		if(!col.isTrigger) return true;
+		return false;
 	}
 
 	public void SetFirstPossibleController(){
@@ -220,5 +223,15 @@ public class PCon : MonoBehaviour
 		SwitchControl();
 		StopCoroutine("ControllerSwitcher");
 		StartCoroutine("ControllerSwitcher");
+	}
+
+	public void Lock(){
+		// rb.constraints.freezePosition = true;
+		rb.constraints = RigidbodyConstraints2D.FreezeAll;
+	}
+
+	public void Unlock(){
+		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		// rb.constraints.freezePositionY = false;
 	}
 }

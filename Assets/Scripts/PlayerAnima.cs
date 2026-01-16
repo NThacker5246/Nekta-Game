@@ -16,7 +16,7 @@ public class PlayerAnima : MonoBehaviour
 	[SerializeField] private int counter;
 	[SerializeField] private int lim1, lim2, l1f, l2f;
 	[SerializeField] private float dt = 0.125f;
-	[SerializeField] private bool awaiting;
+	[SerializeField] private bool awaiting, _lock, _playOnlyEnable, _enables;
 
 	public void SetMode(int mode){
 		this.mode = mode;
@@ -27,6 +27,7 @@ public class PlayerAnima : MonoBehaviour
 	}
 
 	public void Redraw(){
+		if(_enables) return;
 		if(counter > lengthes[mode]){
 			SetLimits(lim1, lim2);
 			counter = lim1;
@@ -38,11 +39,15 @@ public class PlayerAnima : MonoBehaviour
 			case 3: player.sprite = gun[counter % gun.Length]; break;
 		}
 		++counter;
-		if(counter > lim2) counter = lim1;
+		if(counter > lim2 && !_playOnlyEnable) counter = lim1;
+		else if(counter > lim2){
+			_enables = true;
+		}
 		if(counter == 25) awaiting = false;
 	}
 
 	public void SetLimits(int l1, int l2){
+		if(_lock) return;
 		if(awaiting && lim1 == l1 && lim2 == l2) return;
 		lim1 = l1 > 0 ? l1 : 0; 
 		Sprite[] ptr;
@@ -59,6 +64,7 @@ public class PlayerAnima : MonoBehaviour
 	}
 
 	public void SetLimitsNow(int l1, int l2){
+		if(_lock) return;
 		if(awaiting && lim1 == l1 && lim2 == l2) return;
 		lim1 = l1 > 0 ? l1 : 0; 
 		Sprite[] ptr;
@@ -76,6 +82,7 @@ public class PlayerAnima : MonoBehaviour
 	}
 
 	public void SetLimitsAsBlock(int l1, int l2){
+		if(_lock) return;
 		if(lim1 == l1 && lim2 == l2) return;
 		lim1 = l1 > 0 ? l1 : 0; 
 		Sprite[] ptr;
@@ -95,6 +102,7 @@ public class PlayerAnima : MonoBehaviour
 
 
 	public void SetLimitsAwait(int l1, int l2){
+		if(_lock) return;
 		if(l2f == l1 && l2f == l2) return;
 		l2f = l1 > 0 ? l1 : 0; 
 		Sprite[] ptr;
@@ -123,7 +131,10 @@ public class PlayerAnima : MonoBehaviour
 		lengthes[2] = wallclip.Length;
 		lengthes[3] = gun.Length;
 		StartCoroutine("Animate");
-		counter = 0;
+		if(_enables){
+			counter = lim1;
+			_enables = false;
+		} else counter = 0;
 	}
 
 	void Update(){
@@ -134,7 +145,11 @@ public class PlayerAnima : MonoBehaviour
 		}
 	}
 
+	public void LockChanges(){
+		_lock = true;
+	}
 
-
-
+	public void UnlockChanges(){
+		_lock = false;
+	}
 }

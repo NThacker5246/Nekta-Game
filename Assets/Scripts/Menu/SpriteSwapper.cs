@@ -11,11 +11,16 @@ public class SpriteSwapper : MonoBehaviour
 	[SerializeField] private float dt = 0.5f;
 
 	void Awake(){
-		StartCoroutine("Anima");
+		// StartCoroutine("Anima");
 	}
 
 	void OnEnable(){
 		StartCoroutine("Anima");
+	}
+
+	void OnDisable(){
+		StopCoroutine("Anima");
+		counter = 0;
 	}
 
 	IEnumerator Anima(){

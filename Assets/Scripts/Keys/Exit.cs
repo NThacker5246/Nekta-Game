@@ -10,6 +10,7 @@ public class Exit : MonoBehaviour
 	[SerializeField] private Location locall;
 	[SerializeField] private bool flag;
 	[SerializeField] private PlayerAnima anim, player;
+	[SerializeField] private PCon plac;
 	[SerializeField] private GameObject swapCanvas;
 
 
@@ -18,6 +19,7 @@ public class Exit : MonoBehaviour
 			inColl = true;
 			anim.SetLimits(13, 14);
 			player = other.GetComponent<PlayerAnima>();
+			plac = other.GetComponent<PCon>();
 		} else if(!flag && other.tag == "Bullet"){
 			//nextLevel.SetController();
 			//player.SwitchControl();
@@ -49,17 +51,21 @@ public class Exit : MonoBehaviour
 	}
 
 	IEnumerator End(){
+		plac.Lock();
 		anim.SetLimits(4, 8);
 		if(player != null){
 			player.SetMode(0);
 			player.SetLimitsAsBlock(15, 25);
 			//player.SetLimitsAwait(0, 6);
-			yield return new WaitForSeconds(1f);
+			player.LockChanges();
+			yield return new WaitForSeconds(1.25f);
+			player.UnlockChanges();
 		} 
 		//yield return new WaitForSeconds(1f);
 		swapCanvas.SetActive(true);
-		yield return new WaitForSeconds(0.75f);
+		yield return new WaitForSeconds(1.125f);
 		locall.NextLevel();
 		swapCanvas.SetActive(false);
+		plac.Unlock();
 	}
 }

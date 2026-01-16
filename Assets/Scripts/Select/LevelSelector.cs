@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelector : MonoBehaviour
 {
-	[SerializeField] private int level;
+	[SerializeField] private int chapter;
 	[SerializeField] private Image txt;
 	[SerializeField] private Transform lp;
 
@@ -14,23 +14,25 @@ public class LevelSelector : MonoBehaviour
 	[SerializeField] private Sprite[] nums;
 
 	void Start(){
-		lp.localPosition = menu[level];
+		lp.localPosition = menu[chapter];
 	}
 
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.UpArrow)){
-			++level;
-			txt.sprite = nums[(level+1)];
-			lp.localPosition = menu[level];
+			print(PlayerPrefs.GetInt("elighable"));
+			if(chapter + 1 > PlayerPrefs.GetInt("elighable")) return;
+			++chapter;
+			txt.sprite = nums[chapter];
+			lp.localPosition = menu[chapter];
 		} else if(Input.GetKeyDown(KeyCode.DownArrow)){
-			--level;
-			txt.sprite = nums[(level+1)];		
-			lp.localPosition = menu[level];	
+			if (--chapter < 0) chapter = 0;
+			txt.sprite = nums[chapter];		
+			lp.localPosition = menu[chapter];	
 		}
 
 		if(Input.GetKeyDown(KeyCode.Space)){
-			PlayerPrefs.SetInt("level", level);
-			PlayerPrefs.SetInt("chapter", 0);
+			PlayerPrefs.SetInt("level", 0);
+			PlayerPrefs.SetInt("chapter", chapter);
 			SceneManager.LoadScene(2);
 		}
 
