@@ -33,11 +33,11 @@ public class LevelSelector : MonoBehaviour
 		if(Input.GetKeyDown(KeyCode.Space)){
 			PlayerPrefs.SetInt("level", 0);
 			PlayerPrefs.SetInt("chapter", chapter);
-			SceneManager.LoadScene(2);
+			SceneManager.LoadScene(3);
 		}
 
 		if(Input.GetKeyDown(KeyCode.Q)){
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene(1);
 		}
 	}
 }

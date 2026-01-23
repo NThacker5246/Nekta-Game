@@ -11,7 +11,7 @@ public class Exit : MonoBehaviour
 	[SerializeField] private bool flag;
 	[SerializeField] private PlayerAnima anim, player;
 	[SerializeField] private PCon plac;
-	[SerializeField] private GameObject swapCanvas;
+	[SerializeField] private GameObject swapCanvas, fuguCanvas;
 
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -62,10 +62,17 @@ public class Exit : MonoBehaviour
 			player.UnlockChanges();
 		} 
 		//yield return new WaitForSeconds(1f);
-		swapCanvas.SetActive(true);
-		yield return new WaitForSeconds(1.125f);
-		locall.NextLevel();
-		swapCanvas.SetActive(false);
+		if(locall.chapter == 4){
+			fuguCanvas.SetActive(true);
+			yield return new WaitForSeconds(1.125f);
+			locall.NextLevel();
+			fuguCanvas.SetActive(false);
+		} else {
+			swapCanvas.SetActive(true);
+			yield return new WaitForSeconds(1.125f);
+			locall.NextLevel();
+			swapCanvas.SetActive(false);
+		}
 		plac.Unlock();
 	}
 }

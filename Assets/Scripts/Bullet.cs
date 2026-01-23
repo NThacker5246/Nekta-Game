@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 	[SerializeField] private float vel;
 	[SerializeField] private Rigidbody2D rb;
 	[SerializeField] private Collider2D col;
+	[SerializeField] private PlayerAnima pla;
 	public int counter;
 
 	void Update(){
@@ -18,6 +19,18 @@ public class Bullet : MonoBehaviour
 			StartCoroutine("Reboot");
 			counter -= 1;
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.tag == "floor"){
+			pla.SetLimits(1, 2);
+		} else if(other.tag == "boss"){
+			pla.SetLimits(3, 5);
+		}
+	}
+	
+	void OnTriggerExit2D(Collider2D other){
+		pla.SetLimits(0, 0);
 	}
 
 	IEnumerator Reboot(){

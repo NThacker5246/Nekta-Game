@@ -12,8 +12,24 @@ public class Relay : MonoBehaviour
 	[SerializeField] private int counter;
 	[SerializeField] private byte mode = 0;
 
-	void Start(){
+	private BoxCollider2D[] _ac, _pc;
+	private SpriteRenderer[] _as, _ps;
+
+	void Awake(){
 		// StartCoroutine("UpdateWall");
+		_ac = new BoxCollider2D[active.Length];
+		_pc = new BoxCollider2D[passive.Length];
+		_as = new SpriteRenderer[active.Length];
+		_ps = new SpriteRenderer[passive.Length];
+
+		for(int i = 0; i < active.Length; ++i){
+			_ac[i] = active[i].GetComponent<BoxCollider2D>();
+			_as[i] = active[i].GetComponent<SpriteRenderer>();
+		}
+		for(int i = 0; i < passive.Length; ++i){
+			_pc[i] = passive[i].GetComponent<BoxCollider2D>();
+			_ps[i] = passive[i].GetComponent<SpriteRenderer>();
+		}
 	}
 
 	IEnumerator UpdateWall(){
@@ -23,13 +39,13 @@ public class Relay : MonoBehaviour
 					flag = flag ^ true;
 					for(byte i = 0; i < active.Length; i++){
 						// active[i].SetActive(flag);
-						active[i].GetComponent<BoxCollider2D>().isTrigger = flag;
-						active[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, flag ? 0.5f : 1f);
+						_ac[i].isTrigger = flag;
+						_as[i].color = new Color(1f, 1f, 1f, flag ? 0.5f : 1f);
 					}
 
 					for(byte i = 0; i < passive.Length; i++){
-						passive[i].GetComponent<BoxCollider2D>().isTrigger = !flag;
-						passive[i].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, flag ? 1f : 0.5f);
+						_pc[i].isTrigger = !flag;
+						_ps[i].color = new Color(1f, 1f, 1f, flag ? 1f : 0.5f);
 					}
 
 					yield return new WaitForSeconds(2f);
@@ -37,10 +53,14 @@ public class Relay : MonoBehaviour
 				break;
 			case 1:
 				while(true){
-					active[counter].SetActive(false);
+					_ac[counter].isTrigger = true;
+					_as[counter].color = new Color(1f, 1f, 1f, 0.5f);
+					// active[counter].SetActive(false);
 					++counter;
 					if(counter == active.Length) counter = 0;
-					active[counter].SetActive(true);
+					// active[counter].SetActive(true);
+					_ac[counter].isTrigger = false;
+					_as[counter].color = new Color(1f, 1f, 1f, 1f);
 					yield return new WaitForSeconds(2f);
 				}
 				break;

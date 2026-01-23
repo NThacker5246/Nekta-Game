@@ -13,9 +13,9 @@ public class Location : MonoBehaviour
  	[SerializeField] public int level, chapter;
  	[SerializeField] private bool rest;
  	[SerializeField] private KeyMan plakeys;
- 	[SerializeField] private GameObject[] cutscenes;
+ 	[SerializeField] private GameObject[] cutscenes, audios;
  	[SerializeField] private GameObject c4, c5, master_cut;
-
+ 	public bool dont;
 	public void SetController(){
 		//player.transform.position = playerPos.position;
 		//player.LegalControl = LegalControl;
@@ -25,16 +25,21 @@ public class Location : MonoBehaviour
 
 	public void NextLevel(){
 		plakeys.txt.text = "Keys: 0";
-		Transform lv = transform.GetChild(chapter).GetChild(level > 0 ? level : 0);
+		Transform lv = transform.GetChild(chapter > 0 ? chapter : 0).GetChild(level > 0 ? level : 0);
 		lv.gameObject.SetActive(false);
 		++level;
-		if(level >= list[chapter].levels) {
+		if(level >= list[chapter > 0 ? chapter : 0].levels) {
 			level = 0; 
+			audios[chapter > 0 ? chapter : 0].SetActive(false);
 			++chapter;
+			audios[chapter].SetActive(true);
 			if(PlayerPrefs.GetInt("elighable") < chapter) {PlayerPrefs.SetInt("elighable", chapter);} 
-			if(chapter == 3) {c4.SetActive(true); StartCoroutine("AwaitPlaying");}
-			else if(chapter == 4) {c5.SetActive(true); StartCoroutine("AwaitPlaying");} 
-			else cutscenes[chapter].SetActive(true);
+			if(!dont){
+				if(chapter == 3) {c4.SetActive(true); StartCoroutine("AwaitPlaying");}
+				else if(chapter == 4) {c5.SetActive(true); StartCoroutine("AwaitPlaying");} 
+				else cutscenes[chapter].SetActive(true);
+			} else cutscenes[chapter].SetActive(true);
+			
 			master_cut.SetActive(true);
 		}
 		player.LegalControl = list[chapter].controlls[level];
@@ -89,7 +94,7 @@ public class Location : MonoBehaviour
 		c5.SetActive(false);
 		cutscenes[chapter].SetActive(true);
 		PlayerPrefs.SetInt("chapter", chapter); 
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(2);
 	}
 }
 

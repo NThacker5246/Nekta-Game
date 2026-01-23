@@ -19,21 +19,31 @@ public class PCon : MonoBehaviour
 	[SerializeField] private float groundRadius = 0.3f;
 	[SerializeField] private Transform groundCheck, left, right, CamTake, up;
 	[SerializeField] private LayerMask groundMask; 
-	[SerializeField] private bool jW, an, jumping; 
+	[SerializeField] private bool jW, an, jumping, started; 
 	[SerializeField] private Sprite[] jbmv;
 	private SpriteRenderer sel;
 
 	[SerializeField] private PlayerAnima anim;
 	[SerializeField] private SpriteRenderer sr;
 
-	[SerializeField] private float blu;
+	[SerializeField] private float blu, px0, py0;
+	[SerializeField] private Sprite[] cons;
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
 		sel = GetComponent<SpriteRenderer>();
 		rb.drag = 1;
-		StartCoroutine("ControllerSwitcher");
+		// StartCoroutine("ControllerSwitcher");
 		SwitchControl();
+		// px0 = controllers[0].transform.position.x;
+		// py0 = controllers[0].transform.position.y;
+	}
+
+	void Update(){
+		if(!started){
+			if(Input.GetKey(KeyCode.F2)) {v4 = 5;}
+			started = false;
+		}
 	}
 
 	void FixedUpdate(){
@@ -136,7 +146,7 @@ public class PCon : MonoBehaviour
 		StartCoroutine("ControllerSwitcher");
 		mode = 0;
 		//anim.SetBool("Move", false);
-		if((LegalControl & 1) == 0){
+		if((LegalControl & (1 << mode)) == 0){
 			while((LegalControl & (1 << mode)) == 0){
 				mode += 1;
 				mode = (byte) (mode & 3);
@@ -163,11 +173,15 @@ public class PCon : MonoBehaviour
 			byte len = (byte) (mode + i); 
 			len &= 3;
 			if((LegalControl & (1 << len)) != 0){
-				controllers[len].gameObject.SetActive(true);
-				controllers[len].transform.position = new Vector3(1637.5f, 844 - 236* realI, 0);
+
+				controllers[realI].sprite = cons[len];
+				controllers[realI].gameObject.SetActive(true);
+				// controllers[len].gameObject.SetActive(true);
+				// controllers[len].transform.position = new Vector3(px0, py0 - 236* realI, 0);
 				realI += 1;
 			} else {
-				controllers[len].gameObject.SetActive(false);
+				// controllers[len].gameObject.SetActive(false);
+				controllers[i].gameObject.SetActive(false);
 			}
 		}
 
@@ -175,20 +189,25 @@ public class PCon : MonoBehaviour
 
 	IEnumerator ControllerSwitcher(){
 		while(true) {
+			// print("Works");
 			yield return new WaitForSeconds(10f);
 			SwitchControl();
+
 		}
 	}
 
 	public void SwitchControl(){
+		// print("work");
 		blu = 0;
 		mode += 1;
 		//anim.SetBool("Move", false);
 		mode = (byte) (mode & 3);
-		while((LegalControl & (1 << mode)) == 0){
-			mode += 1;
-			mode = (byte) (mode & 3);
-			an = false;
+		if((LegalControl & (1 << mode)) == 0){
+			while((LegalControl & (1 << mode)) == 0){
+				mode += 1;
+				mode = (byte) (mode & 3);
+				an = false;
+			}
 		}
 
 		anim.SetMode(mode);
@@ -197,6 +216,8 @@ public class PCon : MonoBehaviour
 		} else {
 			rb.gravityScale = 1.25f;
 		}
+		vx = 0;
+		tmr = 0;
 
 		if(mode == 1){
 			//anim.SetBool("Ball", true);
@@ -210,11 +231,13 @@ public class PCon : MonoBehaviour
 			byte len = (byte) (mode + i); 
 			len &= 3;
 			if((LegalControl & (1 << len)) != 0){
-				controllers[len].gameObject.SetActive(true);
-				controllers[len].transform.position = new Vector3(1637.5f, 844 - 236* realI, 0);
+				// controllers[len].gameObject.SetActive(true);
+				controllers[realI].sprite = cons[len];
+				controllers[realI].gameObject.SetActive(true);
+				// controllers[len].transform.position = new Vector3(20,  -130 - 213*realI, 0);
 				realI += 1;
 			} else {
-				controllers[len].gameObject.SetActive(false);
+				controllers[i].gameObject.SetActive(false);
 			}
 		}
 	}

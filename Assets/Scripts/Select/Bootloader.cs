@@ -12,11 +12,13 @@ public class Bootloader : MonoBehaviour
 		int lv = PlayerPrefs.GetInt("level");
 		int cp = PlayerPrefs.GetInt("chapter");
 		if(cp < 0) cp = 0;
-		locall.level = lv - 1;
-		locall.chapter = cp;
+		locall.level = 9;
+		locall.chapter = cp-1;
+		locall.dont = true;
 		cuts[0].SetActive(false);
 		cuts[cp].SetActive(true);
 		locall.NextLevel();
+		locall.dont = false;
 		// PlayerPrefs.SetInt("level", 0);
 		// PlayerPrefs.SetInt("chapter", 0);
 		player.SetFirstPossibleController();

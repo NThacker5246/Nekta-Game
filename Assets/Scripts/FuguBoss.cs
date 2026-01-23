@@ -64,6 +64,9 @@ public class FuguBoss : MonoBehaviour
     		// 	rb.velocity = new Vector2(1, rb.velocity.y);
     		// }
 
-    	}
+    	} else if(other.tag == "Bullet"){
+            rb.velocity = Vector3.Normalize(other.GetComponent<Rigidbody2D>().velocity) * rb.velocity.magnitude;
+            other.gameObject.SetActive(false);
+        }
     }
 }

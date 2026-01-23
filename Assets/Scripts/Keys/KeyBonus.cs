@@ -6,6 +6,7 @@ public class KeyBonus : MonoBehaviour
 {
 	[SerializeField] private bool flag;
 	[SerializeField] private PlayerAnima anim;
+	[SerializeField] private AudioSource src;
 
 	void Awake(){
 		anim = GetComponent<PlayerAnima>();
@@ -18,10 +19,12 @@ public class KeyBonus : MonoBehaviour
 				other.GetComponent<KeyMan>().AddKey(gameObject);
 				StartCoroutine("Dest");
 				flag = true;
+				src.Play();
 			} else if(other.tag == "Bullet"){
 				other.GetComponent<Bullet>().player.AddKey(gameObject);
 				StartCoroutine("Dest");
 				flag = true;
+				src.Play();
 			}
 		}
 	}
