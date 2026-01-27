@@ -29,6 +29,9 @@ public class PCon : MonoBehaviour
 	[SerializeField] private float blu, px0, py0;
 	[SerializeField] private Sprite[] cons;
 
+	[SerializeField] private BoxCollider2D[] cols;
+	[SerializeField] private byte cls;
+
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
 		sel = GetComponent<SpriteRenderer>();
@@ -37,6 +40,10 @@ public class PCon : MonoBehaviour
 		SwitchControl();
 		// px0 = controllers[0].transform.position.x;
 		// py0 = controllers[0].transform.position.y;
+	}
+
+	void OnEnable(){
+		SwitchControl();
 	}
 
 	void Update(){
@@ -211,6 +218,9 @@ public class PCon : MonoBehaviour
 		}
 
 		anim.SetMode(mode);
+		cols[cls].enabled = false;
+		cols[mode].enabled = true;
+		cls = mode;
 		if(mode == 2){
 			rb.gravityScale = 0;
 		} else {

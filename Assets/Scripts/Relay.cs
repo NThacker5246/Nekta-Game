@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#pragma warning disable CS0162
 
 public class Relay : MonoBehaviour
 {

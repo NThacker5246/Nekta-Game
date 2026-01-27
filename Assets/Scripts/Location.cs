@@ -24,7 +24,7 @@ public class Location : MonoBehaviour
 	}
 
 	public void NextLevel(){
-		plakeys.txt.text = "Keys: 0";
+		plakeys.Reset();
 		Transform lv = transform.GetChild(chapter > 0 ? chapter : 0).GetChild(level > 0 ? level : 0);
 		lv.gameObject.SetActive(false);
 		++level;
@@ -52,7 +52,7 @@ public class Location : MonoBehaviour
 
 	public void RestartLevel(){
 		// rest = 20;
-		plakeys.txt.text = "Keys: 0";
+		plakeys.Reset();
 		plakeys.RestartKeys();
 		list[chapter].eyes[level].SetActive(false);
 		player.LegalControl = list[chapter].controlls[level];
