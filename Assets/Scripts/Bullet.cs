@@ -26,6 +26,10 @@ public class Bullet : MonoBehaviour
 			pla.SetLimits(1, 2);
 		} else if(other.tag == "boss"){
 			pla.SetLimits(3, 5);
+		} else if(other.tag == "spike"){
+			pla.SetLimits(3, 5);
+			rb.velocity = Vector2.zero;
+			StartCoroutine("Destroy");
 		}
 	}
 	
@@ -37,6 +41,13 @@ public class Bullet : MonoBehaviour
 		yield return new WaitForSeconds(0.05f);
 		col.isTrigger = false;
 		yield return new WaitForSeconds(1.95f);
+		gameObject.SetActive(false);
+	}
+
+	IEnumerator Destroy(){
+		// yield return new WaitForSeconds(0.05f);
+		// col.isTrigger = false;
+		yield return new WaitForSeconds(0.2f);
 		gameObject.SetActive(false);
 	}
 }

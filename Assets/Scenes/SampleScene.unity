@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 2896071}
   m_Layer: 0
   m_Name: sharp (11)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,7 +1608,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1628,7 +1628,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1872,9 +1872,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 97363439}
   - {fileID: 413686150}
-  - {fileID: 1150039722}
   - {fileID: 720347378}
   - {fileID: 677559742}
   - {fileID: 1749283221}
@@ -1954,7 +1952,7 @@ GameObject:
   - component: {fileID: 46367576}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2084,7 +2082,7 @@ GameObject:
   - component: {fileID: 50340289}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2209,7 +2207,7 @@ GameObject:
   - component: {fileID: 50609315}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2622,7 +2620,7 @@ GameObject:
   - component: {fileID: 63599598}
   m_Layer: 0
   m_Name: sharp (9)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2937,82 +2935,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3477383451754018423, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
   m_PrefabInstance: {fileID: 75739587}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &75889301
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 75889304}
-  - component: {fileID: 75889303}
-  - component: {fileID: 75889302}
-  m_Layer: 5
-  m_Name: Keys (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &75889302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75889301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4122be170ccc81544a89fa9f8caf0bf6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &75889303
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75889301}
-  m_CullTransparentMesh: 1
---- !u!224 &75889304
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75889301}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1150039722}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 197.90002, y: -65.000015}
-  m_SizeDelta: {x: 130, y: 130}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &76040621 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3477383451754018380, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
@@ -3480,7 +3402,7 @@ GameObject:
   - component: {fileID: 95391190}
   m_Layer: 0
   m_Name: sharp (7)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3759,88 +3681,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3477383451754018423, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
   m_PrefabInstance: {fileID: 96636933}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &97363438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 97363439}
-  - component: {fileID: 97363441}
-  - component: {fileID: 97363440}
-  m_Layer: 5
-  m_Name: Keys
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &97363439
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97363438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 45265215}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230, y: -70}
-  m_SizeDelta: {x: 400, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &97363440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97363438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 70
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Keys: 0
-
-'
---- !u!222 &97363441
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97363438}
-  m_CullTransparentMesh: 1
 --- !u!1001 &98303953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4118,7 +3958,7 @@ GameObject:
   - component: {fileID: 107725132}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4327,7 +4167,7 @@ GameObject:
   - component: {fileID: 117251129}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6992,7 +6832,7 @@ GameObject:
   - component: {fileID: 199043650}
   m_Layer: 0
   m_Name: sharp (16)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7297,7 +7137,7 @@ GameObject:
   - component: {fileID: 202456383}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8288,7 +8128,7 @@ GameObject:
   - component: {fileID: 232881565}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8912,7 +8752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262441714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.143, z: 0}
+  m_LocalPosition: {x: 0.4, y: -0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9058,7 +8898,7 @@ GameObject:
   - component: {fileID: 263420048}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9387,7 +9227,7 @@ GameObject:
   - component: {fileID: 266936215}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9995,7 +9835,7 @@ GameObject:
   - component: {fileID: 284586871}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10166,7 +10006,7 @@ GameObject:
   - component: {fileID: 285598899}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10291,7 +10131,7 @@ GameObject:
   - component: {fileID: 286904177}
   m_Layer: 0
   m_Name: sharp  (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11298,7 +11138,7 @@ GameObject:
   - component: {fileID: 335965482}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11618,7 +11458,7 @@ GameObject:
   - component: {fileID: 340251955}
   m_Layer: 0
   m_Name: sharp (12)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11827,7 +11667,7 @@ GameObject:
   - component: {fileID: 343601454}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12970,6 +12810,17 @@ MonoBehaviour:
   list:
   - levels: 10
     controlls: 0100000003000000030000000300000007000000060000000600000005000000060000000500000005000000
+    _controlls:
+    - able: 01000000
+    - able: 0100000002000000
+    - able: 0100000002000000
+    - able: 0200000001000000
+    - able: 0200000003000000
+    - able: 0300000002000000
+    - able: 0100000003000000
+    - able: 0100000003000000
+    - able: 0100000003000000
+    - able: 0300000001000000
     playerPoses:
     - {x: -4.95, y: -3.95, z: 0}
     - {x: 8.32, y: -2.66, z: 0}
@@ -12994,6 +12845,17 @@ MonoBehaviour:
     - {fileID: 1263010065}
   - levels: 10
     controlls: 06000000060000000c000000090000000c0000000a000000060000000a0000000900000009000000
+    _controlls:
+    - able: 0200000003000000
+    - able: 0200000003000000
+    - able: 0400000003000000
+    - able: 0100000004000000
+    - able: 0400000003000000
+    - able: 0200000004000000
+    - able: 0200000003000000
+    - able: 0200000004000000
+    - able: 0100000004000000
+    - able: 0400000001000000
     playerPoses:
     - {x: 0.19, y: 8.55, z: 0}
     - {x: 9.04, y: 6.26, z: 0}
@@ -13018,6 +12880,17 @@ MonoBehaviour:
     - {fileID: 1411627864}
   - levels: 10
     controlls: 0f0000000f0000000f0000000f000000070000000e0000000f0000000e0000000f0000000f000000
+    _controlls:
+    - able: 0100000003000000
+    - able: 0200000004000000
+    - able: 0200000003000000
+    - able: 010000000200000004000000
+    - able: 010000000300000004000000
+    - able: 0400000001000000
+    - able: 010000000400000003000000
+    - able: 020000000100000004000000
+    - able: 040000000100000003000000
+    - able: 020000000400000003000000
     playerPoses:
     - {x: -5.41, y: 16.52, z: 0}
     - {x: 8.15, y: 16.52, z: 0}
@@ -13042,6 +12915,17 @@ MonoBehaviour:
     - {fileID: 78306376}
   - levels: 10
     controlls: 090000000a000000060000000b0000000d000000090000000d0000000b0000000d0000000e000000
+    _controlls:
+    - able: 01000000020000000300000004000000
+    - able: 02000000030000000400000001000000
+    - able: 01000000040000000200000003000000
+    - able: 01000000020000000400000003000000
+    - able: 010000000300000002000000
+    - able: 040000000300000002000000
+    - able: 01000000040000000300000002000000
+    - able: 030000000200000004000000
+    - able: 02000000010000000400000003000000
+    - able: 04000000010000000200000003000000
     playerPoses:
     - {x: 4.92, y: 31.48, z: 0}
     - {x: 14.39, y: 26.79, z: 0}
@@ -13066,6 +12950,17 @@ MonoBehaviour:
     - {fileID: 61572954}
   - levels: 10
     controlls: 01000000030000000b00000003000000070000000600000006000000050000000600000006000000
+    _controlls:
+    - able: 01000000020000000300000004000000
+    - able: 030000000200000004000000
+    - able: 02000000040000000300000001000000
+    - able: 03000000040000000200000001000000
+    - able: 04000000020000000100000003000000
+    - able: 04000000020000000300000001000000
+    - able: 040000000200000003000000
+    - able: 01000000040000000200000003000000
+    - able: 010000000200000004000000
+    - able: 01000000030000000400000002000000
     playerPoses:
     - {x: -2.41, y: 37.11, z: 0}
     - {x: 8.86, y: 37.35, z: 0}
@@ -13206,7 +13101,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13226,7 +13121,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13340,7 +13235,7 @@ GameObject:
   - component: {fileID: 390284685}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13465,7 +13360,7 @@ GameObject:
   - component: {fileID: 390655425}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13747,7 +13642,7 @@ GameObject:
   - component: {fileID: 392132025}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13872,7 +13767,7 @@ GameObject:
   - component: {fileID: 392489082}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14028,7 +13923,7 @@ GameObject:
   - component: {fileID: 395227208}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14153,7 +14048,7 @@ GameObject:
   - component: {fileID: 395402738}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14971,7 +14866,7 @@ GameObject:
   - component: {fileID: 408212099}
   m_Layer: 0
   m_Name: sharp (14)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15157,7 +15052,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15177,7 +15072,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15230,7 +15125,7 @@ RectTransform:
   - {fileID: 591507401}
   - {fileID: 1029202684}
   m_Father: {fileID: 45265215}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15404,7 +15299,7 @@ GameObject:
   - component: {fileID: 415648289}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15946,7 +15841,7 @@ GameObject:
   - component: {fileID: 464125267}
   m_Layer: 0
   m_Name: sharp (9)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17653,7 +17548,7 @@ GameObject:
   - component: {fileID: 511061482}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17862,7 +17757,7 @@ GameObject:
   - component: {fileID: 512438316}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18640,7 +18535,7 @@ GameObject:
   - component: {fileID: 522658267}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19142,7 +19037,7 @@ GameObject:
   - component: {fileID: 539320811}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19963,7 +19858,7 @@ GameObject:
   - component: {fileID: 560594748}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20088,7 +19983,7 @@ GameObject:
   - component: {fileID: 569206110}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24416,7 +24311,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 45265215}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -24858,7 +24753,7 @@ GameObject:
   - component: {fileID: 702057534}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25155,7 +25050,7 @@ GameObject:
   - component: {fileID: 707782951}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25311,7 +25206,7 @@ GameObject:
   - component: {fileID: 713815943}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25525,7 +25420,7 @@ GameObject:
   - component: {fileID: 717814181}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25932,7 +25827,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 45265215}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -26021,7 +25916,7 @@ GameObject:
   - component: {fileID: 731430402}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26146,7 +26041,7 @@ GameObject:
   - component: {fileID: 736159351}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28847,7 +28742,7 @@ GameObject:
   - component: {fileID: 809613110}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29176,7 +29071,7 @@ GameObject:
   - component: {fileID: 829250890}
   m_Layer: 0
   m_Name: sharp (8)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29301,7 +29196,7 @@ GameObject:
   - component: {fileID: 836706997}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29575,7 +29470,7 @@ GameObject:
   - component: {fileID: 846045084}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32134,7 +32029,7 @@ GameObject:
   - component: {fileID: 909710549}
   m_Layer: 0
   m_Name: sharp (7)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32802,7 +32697,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -32822,7 +32717,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -33160,7 +33055,7 @@ GameObject:
   - component: {fileID: 961577900}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33535,7 +33430,7 @@ GameObject:
   - component: {fileID: 967606466}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34125,7 +34020,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -34145,7 +34040,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -35353,7 +35248,7 @@ GameObject:
   - component: {fileID: 1018678898}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35478,7 +35373,7 @@ GameObject:
   - component: {fileID: 1022454143}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36285,7 +36180,7 @@ GameObject:
   - component: {fileID: 1045576349}
   m_Layer: 0
   m_Name: sharp (10)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37004,7 +36899,7 @@ GameObject:
   - component: {fileID: 1054224309}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37129,7 +37024,7 @@ GameObject:
   - component: {fileID: 1055039370}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37828,7 +37723,7 @@ GameObject:
   - component: {fileID: 1064806803}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38416,7 +38311,7 @@ GameObject:
   - component: {fileID: 1086648048}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38895,7 +38790,7 @@ GameObject:
   - component: {fileID: 1093958728}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39574,7 +39469,7 @@ GameObject:
   - component: {fileID: 1113016280}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40659,84 +40554,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3477383451754018423, guid: ecd9f36a9749edb46ad9b2f7b2d3ae52, type: 3}
   m_PrefabInstance: {fileID: 1145259363}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1150039721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1150039722}
-  - component: {fileID: 1150039724}
-  - component: {fileID: 1150039723}
-  m_Layer: 5
-  m_Name: Whitem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1150039722
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150039721}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 75889304}
-  - {fileID: 1712597799}
-  m_Father: {fileID: 45265215}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.45, y: -90}
-  m_SizeDelta: {x: 263, y: 130}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1150039723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150039721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1150039724
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150039721}
-  m_CullTransparentMesh: 1
 --- !u!1 &1153775543
 GameObject:
   m_ObjectHideFlags: 0
@@ -41118,7 +40935,7 @@ GameObject:
   - component: {fileID: 1164289838}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41392,7 +41209,7 @@ GameObject:
   - component: {fileID: 1171638655}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42379,7 +42196,7 @@ GameObject:
   - component: {fileID: 1200354378}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43016,7 +42833,7 @@ GameObject:
   - component: {fileID: 1214095970}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43526,7 +43343,7 @@ GameObject:
   - component: {fileID: 1242804794}
   m_Layer: 0
   m_Name: sharp  (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44571,7 +44388,7 @@ GameObject:
   - component: {fileID: 1272671136}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44780,7 +44597,7 @@ GameObject:
   - component: {fileID: 1273361229}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44905,7 +44722,7 @@ GameObject:
   - component: {fileID: 1275385338}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45076,7 +44893,7 @@ GameObject:
   - component: {fileID: 1276708529}
   m_Layer: 0
   m_Name: sharp (7)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46374,7 +46191,7 @@ GameObject:
   - component: {fileID: 1321064138}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47575,7 +47392,7 @@ GameObject:
   - component: {fileID: 1344731578}
   m_Layer: 0
   m_Name: sharp (7)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47700,7 +47517,7 @@ GameObject:
   - component: {fileID: 1346631132}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47825,7 +47642,7 @@ GameObject:
   - component: {fileID: 1348495811}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49245,7 +49062,7 @@ GameObject:
   - component: {fileID: 1385062046}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49783,7 +49600,7 @@ GameObject:
   - component: {fileID: 1392290088}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50628,7 +50445,7 @@ GameObject:
   - component: {fileID: 1403459280}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50799,7 +50616,7 @@ GameObject:
   - component: {fileID: 1407954564}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51979,7 +51796,7 @@ GameObject:
   - component: {fileID: 1443207619}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53195,7 +53012,7 @@ GameObject:
   - component: {fileID: 1477366828}
   m_Layer: 0
   m_Name: sharp  (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54644,7 +54461,7 @@ GameObject:
   - component: {fileID: 1517583619}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56401,7 +56218,7 @@ GameObject:
   - component: {fileID: 1567205455}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57244,7 +57061,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -57264,7 +57081,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -59479,7 +59296,7 @@ GameObject:
   - component: {fileID: 1618825074}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59732,7 +59549,7 @@ GameObject:
   - component: {fileID: 1621954506}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60699,7 +60516,7 @@ GameObject:
   - component: {fileID: 1641415788}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61272,7 +61089,7 @@ GameObject:
   - component: {fileID: 1654470370}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62065,7 +61882,7 @@ GameObject:
   - component: {fileID: 1674673833}
   m_Layer: 0
   m_Name: sharp (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62678,8 +62495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
-  v: 9
-  v4: 1.15
+  v: 5
+  v4: 1.8
   vb: 3.75
   j: 12
   vx: 0
@@ -62688,7 +62505,11 @@ MonoBehaviour:
   maxJb: 7.25
   rb: {fileID: 1681642496}
   mode: 0
+  _modecounter: 0
   LegalControl: 9
+  _LegalControl:
+    able: 
+  _chapterTime: 5
   controllers:
   - {fileID: 231009728}
   - {fileID: 1121914191}
@@ -62708,6 +62529,7 @@ MonoBehaviour:
   an: 0
   jumping: 0
   started: 0
+  _locker: 0
   jbmv:
   - {fileID: -1026866023, guid: 8fa4271c745d9a54cb152aca7b1cbe50, type: 3}
   - {fileID: 1609458373, guid: 8fa4271c745d9a54cb152aca7b1cbe50, type: 3}
@@ -62789,7 +62611,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae62e7ecfd799d84fa254bb4ae0bf599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaf6008307b6859458cba29164f1c1f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -62808,7 +62630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681642494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.95, y: -3.95, z: 0}
+  m_LocalPosition: {x: 6.735, y: -0.291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62832,13 +62654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keys: 0
-  txt: {fileID: 97363440}
-  tx: {fileID: 75889302}
-  sp:
-  - {fileID: 21300000, guid: 4122be170ccc81544a89fa9f8caf0bf6, type: 3}
-  - {fileID: 21300000, guid: b42e456c0e1959a4d99d68179e58b6d1, type: 3}
-  - {fileID: 21300000, guid: e7f496f3eb7806f4d99aaae7774a9ac5, type: 3}
-  - {fileID: 21300000, guid: 48a106bbce425d54781e3a0f41447e4d, type: 3}
   locall: {fileID: 378478411}
   lastkeys:
   - {fileID: 0}
@@ -62981,7 +62796,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -62992,7 +62807,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.4}
+  m_Size: {x: 0.5, y: 1.24}
   m_EdgeRadius: 0
 --- !u!61 &1681642508
 BoxCollider2D:
@@ -63018,7 +62833,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.1}
+  m_Size: {x: 0.75, y: 1.05}
   m_EdgeRadius: 0
 --- !u!1 &1687322836
 GameObject:
@@ -63034,7 +62849,7 @@ GameObject:
   - component: {fileID: 1687322838}
   m_Layer: 0
   m_Name: 'sharp '
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63302,7 +63117,7 @@ RectTransform:
   m_Children:
   - {fileID: 1677698775}
   m_Father: {fileID: 45265215}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -63569,82 +63384,6 @@ MonoBehaviour:
   _lock: 0
   _playOnlyEnable: 0
   _enables: 0
---- !u!1 &1712597798
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712597799}
-  - component: {fileID: 1712597801}
-  - component: {fileID: 1712597800}
-  m_Layer: 5
-  m_Name: Keys (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1712597799
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712597798}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1150039722}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 47, y: -65.000015}
-  m_SizeDelta: {x: 94, y: 82}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1712597800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712597798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e2d8347681c9f224e95ec21f805f7e0d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1712597801
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712597798}
-  m_CullTransparentMesh: 1
 --- !u!1 &1714263711
 GameObject:
   m_ObjectHideFlags: 0
@@ -64496,7 +64235,7 @@ GameObject:
   - component: {fileID: 1741603553}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65557,7 +65296,7 @@ RectTransform:
   - {fileID: 887796569}
   - {fileID: 1974114760}
   m_Father: {fileID: 45265215}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -66918,7 +66657,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -66938,7 +66677,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -67901,7 +67640,7 @@ GameObject:
   - component: {fileID: 1826612614}
   m_Layer: 0
   m_Name: sharp (7)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68900,7 +68639,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -68920,7 +68659,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -68950,7 +68689,7 @@ GameObject:
   - component: {fileID: 1867688271}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69075,7 +68814,7 @@ GameObject:
   - component: {fileID: 1869423482}
   m_Layer: 0
   m_Name: sharp (5)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70103,7 +69842,7 @@ GameObject:
   - component: {fileID: 1891901736}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71236,7 +70975,7 @@ GameObject:
   - component: {fileID: 1913021681}
   m_Layer: 0
   m_Name: sharp (8)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71635,7 +71374,7 @@ GameObject:
   - component: {fileID: 1933567156}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72071,7 +71810,7 @@ GameObject:
   - component: {fileID: 1950766742}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72543,7 +72282,7 @@ GameObject:
   - component: {fileID: 1966880870}
   m_Layer: 0
   m_Name: sharp (15)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73441,7 +73180,7 @@ GameObject:
   - component: {fileID: 1978752092}
   m_Layer: 0
   m_Name: sharp
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73627,7 +73366,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61c5fe19b35d68a40be005d5030e36af, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -73647,7 +73386,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -73802,7 +73541,7 @@ GameObject:
   - component: {fileID: 1982492320}
   m_Layer: 0
   m_Name: sharp (13)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74190,7 +73929,7 @@ GameObject:
   - component: {fileID: 1984660021}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74315,7 +74054,7 @@ GameObject:
   - component: {fileID: 1988901450}
   m_Layer: 0
   m_Name: sharp  (2)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75695,7 +75434,7 @@ GameObject:
   - component: {fileID: 2023530019}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76786,7 +76525,7 @@ GameObject:
   - component: {fileID: 2051940606}
   m_Layer: 0
   m_Name: sharp (4)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77183,7 +76922,7 @@ GameObject:
   - component: {fileID: 2063344927}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77354,7 +77093,7 @@ GameObject:
   - component: {fileID: 2065028005}
   m_Layer: 0
   m_Name: sharp (3)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78144,7 +77883,7 @@ GameObject:
   - component: {fileID: 2089670206}
   m_Layer: 0
   m_Name: sharp (1)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79293,7 +79032,7 @@ GameObject:
   - component: {fileID: 2115287835}
   m_Layer: 0
   m_Name: sharp (10)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79978,7 +79717,7 @@ GameObject:
   - component: {fileID: 2131728327}
   m_Layer: 0
   m_Name: sharp (6)
-  m_TagString: Untagged
+  m_TagString: spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

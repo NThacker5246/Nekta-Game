@@ -23,6 +23,49 @@ public class Location : MonoBehaviour
 		//player.GetComponent<KeyMan>().eye = eye;
 	}
 
+	public void Awake(){
+		// for(int i = 0; i < list.Length; ++i){
+		// 	list[i]._controlls = new Controllers[10];
+		// 	for(int j = 0; j < 10; ++j){
+		// 		int cons = 0;
+
+		// 		if((list[i].controlls[j] & 1) != 0){
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 2) != 0){
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 4) != 0){
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 8) != 0){
+		// 			++cons;
+		// 		}
+		// 		print(i);
+		// 		print(j);
+		// 		list[i]._controlls[j].able = new int[cons];
+		// 		cons = 0;
+		// 		if((list[i].controlls[j] & 1) != 0){
+		// 			list[i]._controlls[j].able[cons] = 1;
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 2) != 0){
+		// 			list[i]._controlls[j].able[cons] = 2;
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 4) != 0){
+		// 			list[i]._controlls[j].able[cons] = 3;
+		// 			++cons;
+		// 		}
+		// 		if((list[i].controlls[j] & 8) != 0){
+		// 			list[i]._controlls[j].able[cons] = 4;
+		// 			++cons;
+		// 		}
+
+		// 	}
+		// }
+	}
+
 	public void NextLevel(){
 		plakeys.Reset();
 		Transform lv = transform.GetChild(chapter > 0 ? chapter : 0).GetChild(level > 0 ? level : 0);
@@ -43,6 +86,10 @@ public class Location : MonoBehaviour
 			master_cut.SetActive(true);
 		}
 		player.LegalControl = list[chapter].controlls[level];
+		player._LegalControl = list[chapter]._controlls[level];
+		
+		if(chapter > 1) player._chapterTime = 10f;
+
 		cam.position = new Vector3((level * 14.2f) + 2.25f, (chapter * 10.35f), -10f);
 		player.transform.position = list[chapter].playerPoses[level];
 		player.SetFirstPossibleController();
@@ -102,6 +149,12 @@ public class Location : MonoBehaviour
 public struct LevelList {
 	public int levels;
 	public int[] controlls;
+	public Controllers[] _controlls;
 	public Vector3[] playerPoses;
 	public GameObject[] eyes;
+}
+
+[System.Serializable]
+public struct Controllers {
+	public int[] able;
 }

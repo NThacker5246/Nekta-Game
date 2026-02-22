@@ -9,9 +9,11 @@ public class PCon : MonoBehaviour
 	[SerializeField] private Camera _camera;
 	[SerializeField] private float v, v4, vb, j, vx, tmr, maxJ, maxJb = 12;
 	[SerializeField] private Rigidbody2D rb;
-	[SerializeField] private byte mode;
+	[SerializeField] private byte mode, _modecounter;
 	//[MenuItem("Controllers")]
 	public int LegalControl;
+	public Controllers _LegalControl;
+	public float _chapterTime = 5f;
 	[SerializeField] private Image[] controllers;
 	[SerializeField] private Bullet bullet;
 	
@@ -19,7 +21,7 @@ public class PCon : MonoBehaviour
 	[SerializeField] private float groundRadius = 0.3f;
 	[SerializeField] private Transform groundCheck, left, right, CamTake, up;
 	[SerializeField] private LayerMask groundMask; 
-	[SerializeField] private bool jW, an, jumping, started; 
+	[SerializeField] private bool jW, an, jumping, started, _locker; 
 	[SerializeField] private Sprite[] jbmv;
 	private SpriteRenderer sel;
 
@@ -151,15 +153,17 @@ public class PCon : MonoBehaviour
 	public void SetFirstPossibleController(){
 		StopCoroutine("ControllerSwitcher");
 		StartCoroutine("ControllerSwitcher");
-		mode = 0;
-		//anim.SetBool("Move", false);
-		if((LegalControl & (1 << mode)) == 0){
-			while((LegalControl & (1 << mode)) == 0){
-				mode += 1;
-				mode = (byte) (mode & 3);
-				an = false;
-			}
-		}
+		_modecounter = 0;
+		mode = (byte) (_LegalControl.able[_modecounter] - 1);
+		// mode = 0;
+		// //anim.SetBool("Move", false);
+		// if((LegalControl & (1 << mode)) == 0){
+		// 	while((LegalControl & (1 << mode)) == 0){
+		// 		mode += 1;
+		// 		mode = (byte) (mode & 3);
+		// 		an = false;
+		// 	}
+		// }
 		anim.SetMode(mode);
 
 		if(mode == 2){
@@ -168,28 +172,35 @@ public class PCon : MonoBehaviour
 			rb.gravityScale = 1.25f;
 		}
 
-		if(mode == 1){
-			//anim.SetBool("Ball", true);
+		if(mode == 4){
+			// player.Lock();
+			rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		} else {
-			//anim.SetBool("Ball", false);
+			if(!_locker) Unlock();
 		}
 
-		byte realI = 0;
+		// byte realI = 0;
 
-		for(byte i = 0; i < 4; i++){
-			byte len = (byte) (mode + i); 
-			len &= 3;
-			if((LegalControl & (1 << len)) != 0){
+		// for(byte i = 0; i < 4; i++){
+		// 	byte len = (byte) (mode + i); 
+		// 	len &= 3;
+		// 	if((LegalControl & (1 << len)) != 0){
 
-				controllers[realI].sprite = cons[len];
-				controllers[realI].gameObject.SetActive(true);
-				// controllers[len].gameObject.SetActive(true);
-				// controllers[len].transform.position = new Vector3(px0, py0 - 236* realI, 0);
-				realI += 1;
-			} else {
-				// controllers[len].gameObject.SetActive(false);
-				controllers[i].gameObject.SetActive(false);
-			}
+		// 		controllers[realI].sprite = cons[len];
+		// 		controllers[realI].gameObject.SetActive(true);
+		// 		// controllers[len].gameObject.SetActive(true);
+		// 		// controllers[len].transform.position = new Vector3(px0, py0 - 236* realI, 0);
+		// 		realI += 1;
+		// 	} else {
+		// 		// controllers[len].gameObject.SetActive(false);
+		// 		controllers[i].gameObject.SetActive(false);
+		// 	}
+		// }
+
+		for(byte i = 0; i < 4; ++i) controllers[i].gameObject.SetActive(false);
+		for(byte i = 0; i < _LegalControl.able.Length; ++i){
+			controllers[i].sprite = cons[_LegalControl.able[i]-1];
+			controllers[i].gameObject.SetActive(true);
 		}
 
 	}
@@ -197,7 +208,7 @@ public class PCon : MonoBehaviour
 	IEnumerator ControllerSwitcher(){
 		while(true) {
 			// print("Works");
-			yield return new WaitForSeconds(10f);
+			yield return new WaitForSeconds(_chapterTime);
 			SwitchControl();
 
 		}
@@ -206,16 +217,21 @@ public class PCon : MonoBehaviour
 	public void SwitchControl(){
 		// print("work");
 		blu = 0;
-		mode += 1;
-		//anim.SetBool("Move", false);
-		mode = (byte) (mode & 3);
-		if((LegalControl & (1 << mode)) == 0){
-			while((LegalControl & (1 << mode)) == 0){
-				mode += 1;
-				mode = (byte) (mode & 3);
-				an = false;
-			}
-		}
+		_modecounter += 1;
+		_modecounter = (byte) (_modecounter % _LegalControl.able.Length);
+		mode = (byte) (_LegalControl.able[_modecounter] - 1);
+		// mode += 1;
+		// //anim.SetBool("Move", false);
+		// mode = (byte) (mode & 3);
+		// if((LegalControl & (1 << mode)) == 0){
+		// 	while((LegalControl & (1 << mode)) == 0){
+		// 		mode += 1;
+		// 		mode = (byte) (mode & 3);
+		// 		an = false;
+		// 	}
+		// }
+
+
 
 		anim.SetMode(mode);
 		cols[cls].enabled = false;
@@ -229,26 +245,32 @@ public class PCon : MonoBehaviour
 		vx = 0;
 		tmr = 0;
 
-		if(mode == 1){
-			//anim.SetBool("Ball", true);
+		if(mode == 4){
+			// player.Lock();
+			rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		} else {
-			//anim.SetBool("Ball", false);
+			if(!_locker) Unlock();
 		}
 
-		byte realI = 0;
+		// byte realI = 0;
 
-		for(byte i = 0; i < 4; i++){
-			byte len = (byte) (mode + i); 
-			len &= 3;
-			if((LegalControl & (1 << len)) != 0){
-				// controllers[len].gameObject.SetActive(true);
-				controllers[realI].sprite = cons[len];
-				controllers[realI].gameObject.SetActive(true);
-				// controllers[len].transform.position = new Vector3(20,  -130 - 213*realI, 0);
-				realI += 1;
-			} else {
-				controllers[i].gameObject.SetActive(false);
-			}
+		// for(byte i = 0; i < 4; i++){
+		// 	byte len = (byte) (mode + i); 
+		// 	len &= 3;
+		// 	if((LegalControl & (1 << len)) != 0){
+		// 		// controllers[len].gameObject.SetActive(true);
+		// 		controllers[realI].sprite = cons[len];
+		// 		controllers[realI].gameObject.SetActive(true);
+		// 		// controllers[len].transform.position = new Vector3(20,  -130 - 213*realI, 0);
+		// 		realI += 1;
+		// 	} else {
+		// 		controllers[i].gameObject.SetActive(false);
+		// 	}
+		// }
+
+		for(byte i = 0; i < _LegalControl.able.Length; ++i){
+			controllers[i].sprite = cons[_LegalControl.able[(i+_modecounter)%_LegalControl.able.Length]-1];
+			// controllers[i].gameObject.SetActive(true);
 		}
 	}
 
@@ -261,10 +283,12 @@ public class PCon : MonoBehaviour
 	public void Lock(){
 		// rb.constraints.freezePosition = true;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
+		_locker = true;
 	}
 
 	public void Unlock(){
 		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		_locker = false;
 		// rb.constraints.freezePositionY = false;
 	}
 }
