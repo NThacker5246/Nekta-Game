@@ -8,6 +8,7 @@ public class CutScript : MonoBehaviour
 {
 	[SerializeField] private VideoPlayer src;
 	[SerializeField] private bool isStart;
+	[SerializeField] private bool isLeft;
 	[SerializeField] private bool isStarted;
 	[SerializeField] private new GameObject audio;
 	[SerializeField] private PCon pla;
@@ -26,6 +27,8 @@ public class CutScript : MonoBehaviour
 			if(pla != null) pla.enabled = true;
 			if(isStart){
 				SceneManager.LoadScene(1);
+			}if(isLeft){
+				SceneManager.LoadScene(2);
 			}
 			transform.parent.gameObject.SetActive(false);
 			gameObject.SetActive(false);

@@ -31,6 +31,9 @@ public class PCon : MonoBehaviour
 	[SerializeField] private float blu, px0, py0;
 	[SerializeField] private Sprite[] cons;
 
+	[SerializeField] private Image spnumber;
+	[SerializeField] private Sprite[] nums;
+
 	[SerializeField] private BoxCollider2D[] cols;
 	[SerializeField] private byte cls;
 
@@ -208,7 +211,10 @@ public class PCon : MonoBehaviour
 	IEnumerator ControllerSwitcher(){
 		while(true) {
 			// print("Works");
-			yield return new WaitForSeconds(_chapterTime);
+			for(int a = ((int) _chapterTime)-1; a >= 0; --a){
+				yield return new WaitForSeconds(1f);
+				spnumber.sprite = nums[a];
+			}
 			SwitchControl();
 
 		}

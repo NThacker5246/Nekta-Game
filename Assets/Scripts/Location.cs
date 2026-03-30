@@ -15,6 +15,8 @@ public class Location : MonoBehaviour
  	[SerializeField] private KeyMan plakeys;
  	[SerializeField] private GameObject[] cutscenes, audios;
  	[SerializeField] private GameObject c4, c5, master_cut;
+ 	[SerializeField] private Sprite[] fback;
+ 	[SerializeField] private SpriteRenderer spb;
  	public bool dont;
 	public void SetController(){
 		//player.transform.position = playerPos.position;
@@ -76,6 +78,8 @@ public class Location : MonoBehaviour
 			audios[chapter > 0 ? chapter : 0].SetActive(false);
 			++chapter;
 			audios[chapter].SetActive(true);
+			spb.sprite = fback[chapter];
+
 			if(PlayerPrefs.GetInt("elighable") < chapter) {PlayerPrefs.SetInt("elighable", chapter);} 
 			if(!dont){
 				if(chapter == 3) {c4.SetActive(true); StartCoroutine("AwaitPlaying");}
