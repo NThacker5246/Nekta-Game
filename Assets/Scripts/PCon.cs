@@ -125,7 +125,6 @@ public class PCon : MonoBehaviour
 					blu = 2;
 					anim.SetLimits(2, 2);
 
-
 					//rd += ro;
 					
 					//bulletTaker.GetChild(bullets).transform.position = new Vector2(transform.position.x, transform.position.y) + rd*2;
@@ -135,8 +134,10 @@ public class PCon : MonoBehaviour
 					//print($"{x}, {y}");
 				} else {
 					blu -= Time.deltaTime;
+
 					anim.SetLimits(0, 1);
 				}
+				rb.velocity = new Vector3(0, rb.velocity.y);
 				break;
 
 		}
